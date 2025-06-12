@@ -5,9 +5,8 @@
 }
 
 .logo {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 1px;
+    height: 1px;
 }
 
 .nav-links {
@@ -19,79 +18,53 @@
 }
 
 .page-header{
-    display: flex;
+    display: fixed;
     justify-content: space-between;
+    height: 110px;
+
+}
+
+.background {
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* button styles */
-.home-Btn {
-    background-color: #B3EBF2;
-    color: black;
-    padding: 10px 10px;
-    border-radius: 5px;
-    margin-right: 4px;
+.home {
+    color: white;
+    margin-right: 15px;
     text-decoration: wavy;
     font-weight: bold;
-}
-.home-Btn:hover {
-    opacity: 0.7;
-    color: purple;
 }
 
-.about-Btn {
-    background-color: #B3EBF2;
-    color: black;
-    padding: 10px 10px;
-    border-radius: 5px;
-    margin-right: 4px;
+.about {
+    color: white;
+    margin-right: 15px;
     text-decoration: wavy;
     font-weight: bold;
-}
-.about-Btn:hover {
-    opacity: 0.7;
-    color: purple;
 }
 
-.contact-Btn {
-    background-color: #B3EBF2;
-    color: black;
-    padding: 10px 10px;
-    border-radius: 5px;
-    margin-right: 4px;
+.contact {
+    color: white;
+    margin-right: 15px;
     text-decoration: wavy;
     font-weight: bold;
-}
-.contact-Btn:hover {
-    opacity: 0.7;
-    color: purple;
 }
 
-.events-Btn {
-    background-color: #B3EBF2;
-    color: black;
-    padding: 10px 10px;
-    border-radius: 5px;
-    margin-right: 4px;
+.events {
+    color: white;
+    margin-right: 15px;
     text-decoration: wavy;
     font-weight: bold;
-}
-.events-Btn:hover {
-    opacity: 0.7;
-    color: purple;
 }
 
-.blog-Btn {
-    background-color: #B3EBF2;
-    color: black;
-    padding: 10px 10px;
-    border-radius: 5px;
-    margin-right: 4px;
+.blog {
+    color: white;
+    margin-left: 10px;
     text-decoration: wavy;
     font-weight: bold;
-}
-.blog-Btn:hover {
-    opacity: 0.7;
-    color: purple;
 }
 
 .name {
