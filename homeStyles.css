@@ -1,0 +1,150 @@
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background: #fff;
+      color: #333;
+    }
+
+    
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #4b0049;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: white;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+      
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .donate-btn {
+      background: #fdf251;
+      color: #4b0049;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: url(izg.jpg) center/cover no-repeat;
+      color: white;
+      padding: 5rem 1rem;
+      text-align: center;
+    }
+
+    .hero-content h2 {
+      font-size: 3rem;
+      
+    }
+
+    .cta-btn {
+      background: #fdf251;
+      color: #4b0049;
+      padding: 0.7rem 1.5rem;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 3rem 1rem;
+    }
+
+    .event-card img,
+.blog-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+    .event-card, .blog-card {
+      background: #f7f7f7;
+      padding: 1rem;
+      border-radius: 10px;
+      flex: 1;
+      min-width: 250px;
+      
+    }
+
+   .event-img {
+  width: 100%;
+  height: 150px;
+  object-fit: fill;      
+  border-radius: 10px;
+  display: block;
+}
+
+
+    .details-btn, .read-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      background: #fdf251;
+      color: #4b0049;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .contact {
+      background: #f9f9f9;
+      text-align: center;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .cta-buttons a {
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .volunteer-btn {
+      background-color: #4b0049;
+      color: white;
+    }
+
+    .donate-alt-btn {
+      background-color: #fdf251;
+      color: #4b0049;
+    }
+
+    .readmore-btn {
+      background-color: #d11d6c;
+      color: white;
+    }
+
+    footer {
+      background: #4b0049;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  
