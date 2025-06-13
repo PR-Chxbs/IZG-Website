@@ -38,7 +38,7 @@
 
 
     .hero {
-      background: url(izg.jpg) center/cover no-repeat;
+      background: url('../resources/izg.jpg') center/cover no-repeat;
       color: white;
       padding: 5rem 1rem;
       text-align: center;
