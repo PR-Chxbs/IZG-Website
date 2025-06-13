@@ -4,27 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="homeStyles.css">
+    
 </head>
 
 <body>
-    <header>
-        <h1>About Us</h1>
-    </header>
-    
-    <main>
-        <section>
-            <h2>Our Mission</h2>
-            <p>We strive to provide the best service and products to our customers, ensuring quality and satisfaction.</p>
-        </section>
+ <header>
+    <div class="logo">Izandla Ziyagezana</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <section>
-            <h2>Our Team</h2>
-            <p>We are a group of dedicated professionals with a passion for excellence in our field.</p>
-        </section>
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Izandla Ziyagazena</h2>
+      <p>Providing support through dignity and care</p>
+    </div>
+  </section>
 
-        <section>
-            <h2>Contact Us</h2>
-            <p>If you have any questions or feedback, feel free to reach out to us at</p>
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>Izandla Ziyagezana is an NGO that provides sanitary pads and food parcels for homeless shelters.</p>
+      <a href="#About Us" class="cta-btn">Learn More</a>
+    </div>
+  </section>
+
+  <section id="events" class="events">
+    <div class="container">
+      <h2>Our Events</h2>
+      <div class="event-cards">
+        <div class="event-card">
+          <img class="event-img" src="Pad Drive.jpg" margin-top: 1rem; max-width: 100%; height: auto; border-radius: 10px; />
+          <h3>Pad Drive</h3>
+          <p>May 15, 2024</p>
+          <a href="#" class="details-btn">View details</a>
+        </div>
+       
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+       <h2>Get Involved</h2>
+      <p>Support our organization by volunteering or donating</p>
+      <img src= "izg donate.jpg" margin-top: 1rem; max-width: 100%; height: auto; border-radius: 10px; />
+
+      <h2>Want to get in touch or contribute?</h2>
+      <a href="#" class="cta-btn">Contact Us</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Izandla Ziyagezana Organisation</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
