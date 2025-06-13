@@ -11,9 +11,10 @@
 
 .nav-links {
     display: flex;
-    margin-top: 5px;
+    justify-content: space-evenly;
+    margin-top: 40px;
     margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .page-header{
@@ -38,7 +39,7 @@
 }
 
 .contact {
-    color: white;
+    color: orchid;
     margin-right: 15px;
     text-decoration: wavy;
     font-weight: bold;
@@ -89,6 +90,19 @@
     font-weight: bold;
     align-items: center;
     width: 100%;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
 }
 
 .copyright {
