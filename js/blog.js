@@ -1,12 +1,19 @@
+console.log("loading");
+
 document.addEventListener("DOMContentLoaded", async () => {
   const container = document.getElementById("posts-container");
 
   try {
     const response = await fetch("https://izg-backend.onrender.com/api/posts");
     const posts = await response.json();
+    console.log("loading");
+    console.log(posts);
 
     posts.forEach(post => {
-      if (!post.published) return;
+      if (!post.published) {
+        
+        return;
+      } 
 
       const card = document.createElement("a");
       card.href = `/blog/${post.slug}`;
