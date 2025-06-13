@@ -36,13 +36,6 @@
       text-decoration: none;
     }
 
-    .donate-btn {
-      background: #fdf251;
-      color: #4b0049;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      font-weight: bold;
-    }
 
     .hero {
       background: url(izg.jpg) center/cover no-repeat;
