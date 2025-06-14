@@ -22,6 +22,11 @@ h1 {
   text-decoration: none;
   color: inherit;
   transition: transform 0.2s ease-in-out;
+
+  .subtext {
+    font-size: 12px;
+    color: #666;
+  }
 }
 
 .blog-card:hover {
@@ -47,4 +52,8 @@ h1 {
   font-size: 0.85em;
   color: #666;
   margin-top: 5px;
+}
+
+main {
+    margin-bottom: 20px;
 }

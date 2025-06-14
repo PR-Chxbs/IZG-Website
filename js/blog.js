@@ -20,9 +20,10 @@ document.addEventListener("DOMContentLoaded", async () => {
       card.className = "blog-card";
 
       card.innerHTML = `
-        <img src="${post.cover_image || '/default-cover.jpg'}" alt="${post.title}" />
+        <img src="../resources/default-event.jpeg" alt="${post.title}" />
         <div class="content">
           <h2 class="title">${post.title}</h2>
+          <p class="subtext">${post.content}</p>
           <p class="date">${new Date(post.published_at).toLocaleDateString()}</p>
         </div>
       `;
