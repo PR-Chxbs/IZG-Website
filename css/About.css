@@ -1,12 +1,18 @@
 .page-header {
     background-color: #420039;
     color: white;
-    padding: 10px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 110px;
+    width: 100%;
 }
 
-.logo {
-    width: 1px;
-    height: 1px;
+.logo img{
+    height: 90px;
+    width: auto;
+    margin-right: 10px;
 }
 
 .nav-links {
@@ -15,13 +21,6 @@
     margin-top: 5px;
     margin-left: 20px;
     margin-right: 20px;
-}
-
-.page-header{
-    display: fixed;
-    justify-content: space-between;
-    height: 110px;
-
 }
 
 .background {
@@ -101,7 +100,6 @@
     background-color: #420039;
     color: white;
     padding: 8px;
-    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
