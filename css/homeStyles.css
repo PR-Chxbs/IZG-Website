@@ -14,12 +14,21 @@
       padding: 20px 2rem;
       background-color: #4b0049;
       border-bottom: 1px solid #ccc;
+      font-weight: bold;
     }
 
-    .logo {
-      font-weight: bold;
-      font-size: 1.2rem;
-      color: white;
+    .logo img {
+      width: 90px;
+      height: 60px;
+      
+    }
+
+    .home{
+      color: orchid;
+    }
+
+    .slogan{
+      font-style: italic;
     }
 
     nav ul {
@@ -56,6 +65,7 @@
       border-radius: 30px;
       font-weight: bold;
       text-decoration: none;
+      margin-top: 2px;
     }
 
     section {
@@ -98,7 +108,6 @@
     }
 
     .contact {
-      background: #f9f9f9;
       text-align: center;
     }
 
@@ -131,10 +140,24 @@
       color: white;
     }
 
-    footer {
-      background: #4b0049;
-      color: white;
-      text-align: center;
-      padding: 1rem 0;
-    }
-  
+    .footer {
+    background-color: #420039;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    align-items: center;
+    width: 100%;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    color: whitesmoke;
+}
