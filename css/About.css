@@ -1,14 +1,19 @@
-.page-header {
-    background-color: #420039;
-    color: white;
-    padding: 10px 30px;
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background: #fff;
+}
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 110px;
-    width: 100%;
+    padding: 20px 35px;
+    background-color: #4b0049;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
 }
-
 .logo img{
     height: 90px;
     width: auto;

@@ -1,7 +1,18 @@
-.page-header {
-    background-color: #420039;
-    color: white;
-    padding: 10px;
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 35px;
+    background-color: #4b0049;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
 }
 
 .logo img {
@@ -12,6 +23,7 @@
 }
 
 .nav-links {
+    color: white;
     display: flex;
     justify-content: space-evenly;
     margin-top: 40px;
@@ -62,10 +74,8 @@
 }
 
 .name {
-    background-color: #B3EBF2;
     width: 650px;
     margin-left: 450px;
-    margin-top: 10px;
     height: 80px;
     font-weight: bold;
     text-align: center;
@@ -79,15 +89,53 @@
     margin-bottom: 20px;
 }
 
+.main-body {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+}
 
-.footer {
+.phone-icon{
+    width: 50px;
+    height: 50px;
+    margin-left: 55px;
+}
+
+.phone-number{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.email-icon{
+    width: 50px;
+    height: 50px;
+    margin-left: 55px;
+}
+
+.email-address{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.instagram-icon{
+    width: 50px;
+    height: 50px;
+    margin-left: 55px;
+}
+
+.instagram-handle{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.instagram-link{
+    color: black;
+}
+
+  footer {
     background-color: #420039;
     color: white;
-    padding: 8px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    padding: 5px;
     text-align: center;
     font-weight: bold;
     align-items: center;
