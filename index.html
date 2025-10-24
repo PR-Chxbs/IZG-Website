@@ -4,36 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="homeStyles.css">
+    <link rel="stylesheet" href="./css/homeStyles.css">
     
 </head>
 
 <body>
  <header>
-    <div class="logo">Izandla Ziyagezana</div>
-    <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="home">Home</a></li>
-                    <li><a href="aboutus.html" class="about">About Us</a></li>
-                    <li><a href="contactus.html" class="contact">Contact Us</a></li>
-                    <li><a href="events.html" class="events">Events</a></li>
-                    <li><a href="blog.html" class="blog">Blog</a></li>
-                </ul>
-            </nav>
+    <div class="logo">
+      <img src="./resources/IZG Full Color Logo.png" alt="IZG Logo">
+    </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="home">Home</a></li>
+          <li><a href="./pages/AboutUs.html" class="about">About Us</a></li>
+          <li><a href="./pages/ContactUs.html" class="">Contact Us</a></li>
+          <li><a href="./pages/Events.html" class="events">Events</a></li>
+          <li><a href="./pages/Blog.html" class="blog">Blog</a></li>
+        </ul>
+        </nav>
   </header>
 
   <section class="hero">
     <div class="hero-content">
-      <h2>Izandla Ziyagazena</h2>
-      <p>Providing support through dignity and care</p>
+      <h2>Izandla Ziya Gezana</h2>
+      <h4 class="slogan">The helping hand.</h4>
     </div>
   </section>
 
   <section id="about" class="about">
     <div class="container">
       <h2>About Us</h2>
-      <p>Izandla Ziyagezana is an NGO that provides sanitary pads and food parcels for homeless shelters.</p>
-      <a href="#About Us" class="cta-btn">Learn More</a>
+      <p>Izandla Ziya Gezana is a Non-Governement Organization that focuses on assisting the underprivileged and homeless with hygiene products and food parcels. For more about us, click on the button below.</p>
+      <a href="./pages/AboutUs.html" class="cta-btn">Learn More</a>
     </div>
   </section>
 
@@ -42,10 +44,10 @@
       <h2>Our Events</h2>
       <div class="event-cards">
         <div class="event-card">
-          <img class="event-img" src="Pad Drive.jpg" margin-top: 1rem; max-width: 100%; height: auto; border-radius: 10px; />
+          <img class="event-img" src="./resources/Pad Drive.jpg" margin-top: 1rem; max-width: 100%; height: auto; border-radius: 10px; />
           <h3>Pad Drive</h3>
           <p>May 15, 2024</p>
-          <a href="#" class="details-btn">View details</a>
+          <a href="./pages/Events.html" class="details-btn">View details</a>
         </div>
        
       </div>
@@ -56,19 +58,37 @@
     <div class="container">
        <h2>Get Involved</h2>
       <p>Support our organization by volunteering or donating</p>
-      <img src= "izg donate.jpg" margin-top: 1rem; max-width: 100%; height: auto; border-radius: 10px; />
+      <img src= "./resources/izg donate.jpg" margin-top: 1rem; max-width: 100%; height: auto; border-radius: 10px; />
 
       <h2>Want to get in touch or contribute?</h2>
-      <a href="#" class="cta-btn">Contact Us</a>
+      <a href="./pages/ContactUs.html" class="cta-btn">Contact Us</a>
     </div>
   </section>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Izandla Ziyagezana Organisation</p>
-    </div>
-  </footer>
+        
+        <!-- Social Media Links -->
+        <section class="footer">
 
-  <script src="script.js"></script>
+            <!-- Contact Information -->
+            <section>
+                <h2>Contact Us</h2>
+                <ul class="social-links">
+                    <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/izandla_ziyagezana_org?igsh=MWdpcGo5eGdsdjVzag==" target="_blank">Instagram</a></li>
+                    <li><a href=" izg.npo@outlook.com" target="_blank"><Email></a></li>
+                </ul>
+            </section>
+
+            <!-- Copyrights -->
+            <section class ="copyright">
+                <p>&copy; 2025 Izandla Ziya Gezana. All rights reserved.</p>
+            </section>
+
+        </section>
+    </footer>
+
+  <script src="./js/blog.js"></script>
 </body>
 </html>
