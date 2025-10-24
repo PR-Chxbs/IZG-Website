@@ -12,7 +12,7 @@ document.getElementById("signinform").addEventListener("submit", async function 
   }
 
   try {
-    const response = await fetch(`${apiBaseUrl}/login`, {
+    const response = await fetch(`${apiBaseUrl}/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
