@@ -1,54 +1,103 @@
+/* Reset & Box Sizing */
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-.header {
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
     align-items: center;
     padding: 20px 35px;
     background-color: #4b0049;
     border-bottom: 1px solid #ccc;
-    font-weight: bold;
 }
 
 .logo img {
     height: 90px;
     width: auto;
-    margin-right: 10px;
-    padding-left: 5px;
 }
 
+/* Sign-In Form Container */
 .sign-in-form {
-    background-color: antiquewhite;
-    width: 500px;
-    height: 300px;
-    margin-top: 200px;
-    margin-left: 555px;
+    background-color: #fff8f0;
+    width: 400px;
+    max-width: 90%;
+    margin: 80px auto;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    
+}
+
+/* Form Elements */
+.sign-in-form form {
+    width: 100%;
+}
+
+.sign-in-form label {
     font-weight: bold;
+    margin-top: 15px;
+    display: block;
+    color: #4b0049;
 }
 
-.signinform {
-    margin-top: 100px;
-    margin-bottom: 150px;
-    padding-top: 50px;
+.sign-in-form input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border-color 0.2s;
 }
 
+.sign-in-form input:focus {
+    border-color: #4b0049;
+    outline: none;
+}
+
+/* Submit Button */
 .submit-button {
     background-color: #4b0049;
-      color: white;
-      font-weight: bold;
-      font-size: medium;
-      border: none;
-      height: 50px;
-      width: 150px;
-      border-radius: 25px;
-      cursor: pointer;
-      margin-left: 155px;
-      margin-top: 25px;
-      transition: background-color 0.2s, color 0.2s;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    padding: 12px 0;
+    width: 100%;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #6a006b;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .sign-in-form {
+        width: 90%;
+        margin: 50px auto;
+        padding: 30px 20px;
+    }
+
+    .logo img {
+        height: 70px;
+    }
 }
