@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 35px;
+    background-color: #4b0049;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 90px;
+    width: auto;
+    margin-right: 10px;
+    padding-left: 5px;
+}
+
+.nav-links {
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-left: 20px;
+}
+
+.page-header{
+    display: fixed;
+    justify-content: space-between;
+    height: 110px;
+}
+
+/* button styles */
+.home {
+    color: white;
+    margin-right: 15px;
+    text-decoration: wavy;
+    font-weight: bold;
+}
+
+.about {
+    color: white;
+    margin-right: 15px;
+    text-decoration: wavy;
+    font-weight: bold;
+}
+
+.contact {
+    color: orchid;
+    margin-right: 15px;
+    text-decoration: wavy;
+    font-weight: bold;
+}
+
+.events {
+    color: white;
+    margin-right: 15px;
+    text-decoration: wavy;
+    font-weight: bold;
+}
+
+.blog {
+    color: white;
+    margin-left: 10px;
+    text-decoration: wavy;
+    font-weight: bold;
+}
+
+.name {
+    width: 650px;
+    margin-left: 450px;
+    height: 80px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 40px;
+}
+
+.page-name {
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-body {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+}
+
+.phone-icon{
+    width: 50px;
+    height: 50px;
+    margin-left: 55px;
+}
+
+.phone-number{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.email-icon{
+    width: 50px;
+    height: 50px;
+    margin-left: 55px;
+}
+
+.email-address{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.instagram-icon{
+    width: 50px;
+    height: 50px;
+    margin-left: 55px;
+}
+
+.instagram-handle{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.instagram-link{
+    color: black;
+}
+
+  footer {
+    background-color: #420039;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    align-items: center;
+    width: 100%;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    color: whitesmoke;
+}
