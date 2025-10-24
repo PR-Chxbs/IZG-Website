@@ -142,6 +142,35 @@
     margin-top: 20px;
     color: whitesmoke;
 }
+
+/* WhatsApp Floating Action Button */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-icon {
+  width: 35px;
+  height: 35px;
+}
   </style>
 </head>
 
@@ -205,7 +234,8 @@
                 <h2>Contact Us</h2>
                 <ul class="social-links">
                     <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
-                    <li><a href="https://www.instagram.com/izandla_ziyagezana_org?igsh=MWdpcGo5eGdsdjVzag==" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/a.matle_poetess?igsh=MW5mOWU3Y3QxemN1ZA==" target="_blank">Instagram</a></li>
                     <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
                 </ul>
             </section>
@@ -216,5 +246,11 @@
             </section>
         </section>
     </footer>
+
+    <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/27608932911" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
+</a>
+
 </body>
 </html>
