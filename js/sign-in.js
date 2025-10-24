@@ -27,7 +27,6 @@ document.getElementById("signinform").addEventListener("submit", async function 
     if (data && data.token) {
       // Store token for authenticated requests
       localStorage.setItem("authToken", data.token);
-      localStorage.setItem("user", JSON.stringify(data.user)); // optional
 
       alert(`Welcome back, ${data.user?.name || "Admin"}!`);
       window.location.href = "./adminEvents.html";

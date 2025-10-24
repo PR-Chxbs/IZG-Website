@@ -1,6 +1,8 @@
 const API_URL = "https://izg-backend.onrender.com/api/events";
 const userId = 13; // Replace with logged-in user's ID (from localStorage or auth system)
 
+const token = localStorage.getItem("authToken");
+
 // DOM elements
 const form = document.getElementById("eventForm");
 const message = document.getElementById("message");
@@ -57,7 +59,10 @@ form.addEventListener("submit", async (e) => {
   try {
     const res = await fetch(url, {
       method,
-      headers: { "Content-Type": "application/json" },
+      headers: {
+         "Content-Type": "application/json",
+         "Authorization": `Bearer ${token}`
+        },
       body: JSON.stringify(eventData),
     });
 
@@ -66,7 +71,7 @@ form.addEventListener("submit", async (e) => {
     if (res.ok) {
       message.textContent = eventId
         ? " Event updated successfully!"
-        : " Event created successfully!";
+        : "✅ Event created successfully!";
       form.reset();
       document.getElementById("event_id").value = "";
       formTitle.textContent = "Create New Event";
@@ -109,7 +114,13 @@ async function deleteEvent(id) {
   if (!confirm("Are you sure you want to delete this event?")) return;
 
   try {
-    const res = await fetch(`${API_URL}/${id}`, { method: "DELETE" });
+    const res = await fetch(`${API_URL}/${id}`, 
+        { 
+            method: "DELETE",
+            headers: {
+         "Authorization": `Bearer ${token}`
+        },
+        });
     const result = await res.json();
 
     if (res.ok) {
