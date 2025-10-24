@@ -1,27 +1,35 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #333;
+}
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      line-height: 1.6;
-      background: #fff;
-      color: #333;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 35px;
+    background-color: #4b0049;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+}
+
+
+.logo img {
+    height: 90px;
+    width: auto;
+    margin-right: 10px;
+    padding-left: 5px;
+}
+
+    .home{
+      color: orchid;
     }
 
-    
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: #4b0049;
-      border-bottom: 1px solid #ccc;
-    }
-
-    .logo {
-      font-weight: bold;
-      font-size: 1.2rem;
-      color: white;
+    .slogan{
+      font-style: italic;
     }
 
     nav ul {
@@ -38,16 +46,9 @@
       text-decoration: none;
     }
 
-    .donate-btn {
-      background: #fdf251;
-      color: #4b0049;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      font-weight: bold;
-    }
 
     .hero {
-      background: url(izg.jpg) center/cover no-repeat;
+      background: url('../resources/izg.jpg') center/cover no-repeat;
       color: white;
       padding: 5rem 1rem;
       text-align: center;
@@ -65,10 +66,11 @@
       border-radius: 30px;
       font-weight: bold;
       text-decoration: none;
+      margin-top: 2px;
     }
 
     section {
-      padding: 3rem 1rem;
+      padding: 5px 1rem;
     }
 
     .event-card img,
@@ -80,17 +82,16 @@
 
     .event-card, .blog-card {
       background: #f7f7f7;
-      padding: 1rem;
+      padding: 15px;
       border-radius: 10px;
       flex: 1;
-      min-width: 250px;
+      min-width: 650px;
       
     }
 
    .event-img {
   width: 100%;
-  height: 150px;
-  object-fit: fill;      
+  height: 100%;      
   border-radius: 10px;
   display: block;
 }
@@ -108,7 +109,6 @@
     }
 
     .contact {
-      background: #f9f9f9;
       text-align: center;
     }
 
@@ -142,9 +142,30 @@
     }
 
     footer {
-      background: #4b0049;
-      color: white;
-      text-align: center;
-      padding: 1rem 0;
-    }
-  
+    background-color: #420039;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    align-items: center;
+    width: 100%;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    color: whitesmoke;
+}
