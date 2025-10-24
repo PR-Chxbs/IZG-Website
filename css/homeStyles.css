@@ -46,6 +46,44 @@ header {
       text-decoration: none;
     }
 
+    .sign-in {
+      text-align: center;
+    }
+
+    .login {
+      background-color: #4b0049;
+      color: white;
+      font-weight: bold;
+      font-size: medium;
+      border: none;
+      height: 50px;
+      width: 150px;
+      border-radius: 25px;
+      cursor: pointer;
+      margin-right: 15px;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    /* hovering over the login button*/
+    .login-button:hover {
+      opacity: 0.8;
+      color: #d11d6c;
+    }
+
+    /* sign up*/
+     .sign-up {
+      background-color: #4b0049;
+      color: white;
+      font-weight: bold;
+      font-size: medium;
+      border: none;
+      height: 50px;
+      width: 150px;
+      border-radius: 25px;
+      cursor: pointer;
+      margin-right: 15px;
+      transition: background-color 0.2s, color 0.2s;
+     }
 
     .hero {
       background: url('../resources/izg.jpg') center/cover no-repeat;
