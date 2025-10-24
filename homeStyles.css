@@ -20,26 +20,8 @@
 
     .logo {
       font-weight: bold;
-<<<<<<< Updated upstream:homeStyles.css
       font-size: 1.2rem;
       color: white;
-=======
-    }
-
-    .logo img {
-      height: 90px;
-    width: auto;
-    margin-right: 10px;
-      
-    }
-
-    .home{
-      color: orchid;
-    }
-
-    .slogan{
-      font-style: italic;
->>>>>>> Stashed changes:css/homeStyles.css
     }
 
     nav ul {
@@ -71,7 +53,6 @@
       text-align: center;
     }
 
-    
     .hero-content h2 {
       font-size: 3rem;
       
@@ -86,13 +67,10 @@
       text-decoration: none;
     }
 
-<<<<<<< Updated upstream:homeStyles.css
     section {
       padding: 3rem 1rem;
     }
 
-=======
->>>>>>> Stashed changes:css/homeStyles.css
     .event-card img,
 .blog-card img {
   width: 100%;
@@ -123,41 +101,6 @@
       margin-top: 1rem;
       background: #fdf251;
       color: #4b0049;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-  
-
-    .event-cards, .blog-cards {
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .event-card, .blog-card {
-      background: #f7f7f7;
-      padding: 1rem;
-      border-radius: 10px;
-      flex: 1;
-    }
-
-    div.event-img {
-      background: #ccc;
-      border-radius: 10px;
-    }
-
-    img.event-img {
-      width: 200px;
-    }
-
-    .details-btn, .read-btn {
-      display: inline-block;
-      margin-top: 1rem;
-      background: #fdf251;
-      color: black;
       padding: 0.5rem 1rem;
       border-radius: 5px;
       font-weight: bold;
@@ -198,7 +141,6 @@
       color: white;
     }
 
-<<<<<<< Updated upstream:homeStyles.css
     footer {
       background: #4b0049;
       color: white;
@@ -206,25 +148,3 @@
       padding: 1rem 0;
     }
   
-=======
-    .footer {
-    background-color: #420039;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    align-items: center;
-    width: 100%;
-    padding: 5px 10px;
-}
-
-.social-links a {
-    color: white;
-    text-decoration: none;
-    
-}
-
-.copyright {
-    text-align: center;
-    color: whitesmoke;
-}
->>>>>>> Stashed changes:css/homeStyles.css
