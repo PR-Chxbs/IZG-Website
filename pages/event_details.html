@@ -3,10 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/event_details.css">
     <title>Document</title>
 </head>
 <body>
-    <p></p>
+    
+    <header>
+        <a href="../index.html">
+        <img src="../resources/IZG Full Color Logo.png" alt="Company Logo" class="logo" />
+        </a>
+
+        <nav>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./AboutUs.html">About</a></li>
+            <li><a href="./Events.html" class="active">Events</a></li>
+            <li><a href="./Blog.html">Blog</a></li>
+            <li><a href="../Admin/Sign-In.html" class="btn">Login</a></li>
+            <!--<li><a href="./pages/ContactUs.html" class="contact">Contact Us</a></li>-->
+        </ul>
+        </nav>
+    </header>
+
+    <div class="container" id="event-details">
+        <div class="loading">Loading event details...</div>
+    </div>
     <script src="../js/event_details.js"></script>
 </body>
 </html>
