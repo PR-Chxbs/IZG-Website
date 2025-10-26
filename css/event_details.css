@@ -1,6 +1,6 @@
 .container {
 	max-width: 900px;
-	margin: 0 auto;	
+	margin: 50px auto;	
 	padding: 1.5rem;
 	padding-top: var(--top-section);
 	background: #fff;
@@ -58,6 +58,10 @@
   	padding: 3rem;
   	font-size: 1.2rem;
   	color: #777;
+}
+
+footer {
+	margin-top: 100px;
 }
 
 @media (max-width: 600px) {
