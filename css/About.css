@@ -5,3 +5,30 @@
         width: 450px;
     }
 }
+
+.our-belief-who-we-are {
+    display: flex;
+    align-items: center;
+    padding: 300px var(--section-padding);
+    gap: 200px;
+
+    .taped-image {
+        width: 600px;
+    }
+
+    .left-container {
+        max-width: 500px;
+    }
+
+    .heading {
+        margin-bottom: 20px;
+    }
+
+    .our-belief {
+        margin-bottom: 80px;
+    }
+}
+
+.help-us {
+    display: flex;
+}
