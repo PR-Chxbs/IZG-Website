@@ -56,19 +56,20 @@
     }
 
     .feeding-kids {
+        top: 80px;
         left: 0;
         width: 160px;
     }
 
     .homeless-shelter {
         left: 100px;
-        top: 280px;
+        top: 360px;
         width: 100px;
     }
 
     .women-hugging {
         right: 10px;
-        top: 40px;
+        top: 120px;
     }
 }
 
@@ -136,6 +137,7 @@
     .labelled-input {
         display: flex;
         flex-direction: column;
+        gap: 4px;
     }
 
     input, select {
