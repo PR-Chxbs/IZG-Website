@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/Contact.css">
+    <link rel="shortcut icon" href="../resources/izg_full_color_logo.png" type="image/x-icon">
     <title>Contact Us</title>
 </head>
 
@@ -19,43 +20,73 @@
 				<li><a href="../pages/AboutUs.html">About</a></li>
 				<li><a href="../pages/Events.html">Events</a></li>
 				<li><a href="../pages/blogs.html">Blog</a></li>
-				<li><a href="../Admin/Sign-In.html" class="btn">Login</a></li>
-				<!--<li><a href="./pages/ContactUs.html" class="active">Contact Us</a></li>-->
+                <li><a href="./pages/ContactUs.html" class="active">Contact Us</a></li>
+				<li><a href="../Admin/Sign-In.html" class="btn">Login</a></li>	
 			</ul>
 		</nav>
 	</header>
 
+    <div class="top-section"></div>
 
-    <section class="main-body">
+    <section id="contact" class="contact">
+		<img src="../resources/conference_background_image.png" alt="Conference Background" class="conference-background section-background">
+		<div class="container">
+			<div class="left-container">
+				<h1 class="heading">Join the cause today, enquire with us to make a change as soon as possible</h1>
+				<p class="subtext">If you have any questions, suggestions, or would like to get involved, please reach out to us. We would love to hear from you!</p>
+                
+                <a class="icon-text">
+                    <img src="../resources/phone logo.jpg" alt="Phone Icon" class="phone-icon icon">
+                    <p class="phone-number">+27 60 893 2911</p>
+                </a>                
 
-        <!-- Main Title -->
-        <section class="name">
-            <h1 class="page-name">Contact Us</h1>
-        </section>
+                <a href="mailto:izg.npo@outlook.com" class="icon-text">
+                    <img src="../resources/black-email-icon.jpg" alt="Email Icon" class="email-icon icon">
+                    <p class="email-address">izg.npo@outlook.com</p>
+                </a>                
 
-        <section class="contact-info">
-            <p>
-                If you have any questions, suggestions, or would like to get involved, please reach out to us. We would love to hear from you!
-            </p>
+                <a href="https://www.instagram.com/izandla_ziyagezana_org" class="icon-text">
+                    <img src="../resources/Instagram.jpg" alt="Instagram Icon" class="instagram-icon icon">
+                    <p class="instagram-handle">izandla_ziyagezana_org</p>
+                </a>
 
-            <img src="../resources/phone logo.jpg" alt="Phone Icon" class="phone-icon">
-            <p class="phone-number">+27 60 893 2911</p>
+                <h3 class="quote">Together, hand in hand, we build a future where nobody is left behind.</h3>
+			</div>
+			<form class="contact-form">
+				<!-- Full Name -->
+				<div class="labelled-input">
+					<label for="full-name">Full Name</label>
+					<input type="text" name="full-name" id="full-name" placeholder="e.g. John Doe" required >
+				</div>
 
-            <img src="../resources/black-email-icon.jpg" alt="Email Icon" class="email-icon">
-            <p class="email-address"> izg.npo@outlook.com</p>
+				<!-- Email -->
+				<div class="labelled-input">
+					<label for="email">Email</label>
+					<input type="email" name="email" id="email" placeholder="e.g. johnd@gmail.com" required >
+				</div>
 
-            <img src="../resources/Instagram.jpg" alt="Instagram Icon" class="instagram-icon">
-            <p class="instagram-handle">izandla_ziyagezana_org</p>
-            <ul class="instagram-link">
-                <li><a href="https://www.instagram.com/izandla_ziyagezana_org?igsh=MWdpcGo5eGdsdjVzag=="> Instagram</a></li>
-            </ul>
+				<!-- Phone Number -->
+				<div class="labelled-input">
+					<label for="phone-number">Phone Number</label>
+					<input type="text" name="phone-number" id="phone-number" placeholder="e.g. +27 12 710 3921" required>
+				</div>
 
-            <h3 class="quote">Together, hand in hand, we build a future where nobody is left behind.</h3>
-        
-        </section>
+				<!-- Type of inquiry -->
+				<div class="labelled-input">
+					<label for="type-of-inquiry">Type of Inquiry</label>
+					<select name="type-of-inquiry" id="type-of-inquiry" required >
+						<option value="" selected disabled>Select an option</option>
+						<option value="donation">Donation</option>
+						<option value="assistance">Need a helping hand</option>
+						<option value="other">Other</option>
+					</select>
+				</div>
 
-    </section>
-    
+				<!-- Submit button -->
+				<button type="submit" class="btn submit-btn">Submit</button>
+			</form>
+		</div>
+  	</section>
 
     <!-- Footer -->
     <footer> 
@@ -64,7 +95,7 @@
 		  	<ul class="social-links">
 				<li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
 				<li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
-				<li><a href="https://www.instagram.com/izandla_ziyagezana_org?igsh=MWdpcGo5eGdsdjVzag==" target="_blank">Instagram</a></li>
+				<li><a href="https://www.instagram.com/izandla_ziyagezana_org" target="_blank">Instagram</a></li>
 				<li><a href="mailto:izg.npo@outlook.com" target="_blank">Email</a></li>
 	  		</ul>
 		</div>

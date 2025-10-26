@@ -1,100 +1,75 @@
-.page-header{
-    display: fixed;
-    justify-content: space-between;
-    height: 110px;
-}
-
-/* button styles */
-.home {
-    color: white;
-    margin-right: 15px;
-    text-decoration: wavy;
-    font-weight: bold;
-}
-
-.about {
-    color: white;
-    margin-right: 15px;
-    text-decoration: wavy;
-    font-weight: bold;
-}
-
-.contact {
-    color: orchid;
-    margin-right: 15px;
-    text-decoration: wavy;
-    font-weight: bold;
-}
-
-.events {
-    color: white;
-    margin-right: 15px;
-    text-decoration: wavy;
-    font-weight: bold;
-}
-
-.blog {
-    color: white;
-    margin-left: 10px;
-    text-decoration: wavy;
-    font-weight: bold;
-}
-
-.name {
-    width: 650px;
-    margin-left: 450px;
-    height: 80px;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 40px;
-}
-
-.page-name {
-    font-size: 35px;
-    font-weight: bold;
-    text-align: center;
+.icon-text {
     margin-bottom: 20px;
-}
 
-.main-body {
-    display: flex;
-    flex-direction: column;
-    margin-left: 8px;
-}
+    .icon {
+        width: 30px;
+    }
 
-.phone-icon{
-    width: 50px;
-    height: 50px;
-    margin-left: 55px;
-}
-
-.phone-number{
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.email-icon{
-    width: 50px;
-    height: 50px;
-    margin-left: 55px;
-}
-
-.email-address{
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.instagram-icon{
-    width: 50px;
-    height: 50px;
-    margin-left: 55px;
-}
-
-.instagram-handle{
-    font-size: 20px;
-    font-weight: bold;
+    p {
+        font-size: 16px;
+    }
 }
 
 .instagram-link{
     color: black;
+}
+
+.contact {
+    position: relative;
+    display: flex;
+
+    .container {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 var(--section-padding);
+    }
+
+    .labelled-input {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    input, select {
+        border: solid 1px var(--secondary-grey-clr);
+    }
+
+    input, select, .submit-btn {
+        padding: 20px 24px;
+    }
+
+    .left-container {
+        margin-top: 40px;
+        width: 500px;
+    }
+
+    .heading {
+        width: 440px;
+        margin-bottom: 10px;
+    }
+
+    .submit-btn {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .contact-form {
+        width: 600px;
+        padding: 60px 50px 100px 50px;
+        background-color: var(--white-clr);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+
+    .subtext {
+        margin-bottom: 40px;
+    }
+}
+
+footer {
+    margin-top: 100px;
 }

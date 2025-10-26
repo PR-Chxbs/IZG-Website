@@ -33,7 +33,23 @@ async function fetchBlogBySlug(slug) {
 
 // Render all blogs
 async function renderBlogList() {
-  app.innerHTML = `<p>Loading blogs...</p>`;
+  // Show skeletons while loading
+  app.innerHTML = `
+    <h1 class="heading">Welcome to our blog</h1>
+    <div class="blog-skeletons">
+      ${Array(6).fill(0).map(() => `
+        <div class="blog-skeleton-card">
+          <div class="skeleton blog-skeleton-img"></div>
+          <div class="blog-skeleton-content">
+            <div class="skeleton blog-skeleton-title"></div>
+            <div class="skeleton blog-skeleton-text"></div>
+            <div class="skeleton blog-skeleton-text" style="width: 60%;"></div>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+
   try {
     const blogs = await fetchBlogs();
     if (!blogs.length) {
@@ -42,20 +58,21 @@ async function renderBlogList() {
     }
 
     const html = `
+      <h1 class="heading">Welcome to our blog</h1>
       <div class="blog-list">
         ${blogs.map(blog => `
           <div class="blog-card" onclick="location.hash='post/${blog.slug}'">
             <img src="${blog.cover_image ? blog.cover_image : defaultImageUrl }" alt="${blog.title}">
             <div class="blog-card-content">
-              <h3>${blog.title}</h3>
               <p>By ${blog.first_name}</p>
+              <h3>${blog.title}</h3>
               <p>${truncate(blog.content, 100)}</p>
             </div>
           </div>
         `).join('')}
       </div>
     `;
-    app.innerHTML = html;
+    fadeIn(app, html);
   } catch (err) {
     app.innerHTML = `<p>Error loading blogs.</p>`;
   }
@@ -63,7 +80,16 @@ async function renderBlogList() {
 
 // Render single blog
 async function renderSinglePost(slug) {
-  app.innerHTML = `<p>Loading post...</p>`;
+  // Show skeleton while loading
+  app.innerHTML = `
+    <div class="blog-post-skeleton">
+      <div class="skeleton blog-skeleton-cover"></div>
+      <div class="skeleton blog-skeleton-title"></div>
+      <div class="skeleton blog-skeleton-author"></div>
+      ${Array(8).fill(0).map(() => `<div class="skeleton blog-skeleton-paragraph"></div>`).join('')}
+    </div>
+  `;
+
   try {
     const post = await fetchBlogBySlug(slug);
 
@@ -76,7 +102,8 @@ async function renderSinglePost(slug) {
         <p>${post.content}</p>
       </div>
     `;
-    app.innerHTML = html;
+    // Add a fade transition between skeleton and actual content
+    fadeIn(app, html);
   } catch (err) {
     app.innerHTML = `<p>Failed to load post.</p>`;
   }
@@ -95,4 +122,14 @@ function renderNotFound() {
 // Helper to shorten text
 function truncate(str, n) {
   return str.length > n ? str.slice(0, n) + "..." : str;
+}
+
+// Smooth fade-in transition between skeleton and loaded content
+function fadeIn(container, newHTML) {
+  container.style.opacity = 0;
+  setTimeout(() => {
+    container.innerHTML = newHTML;
+    container.style.transition = "opacity 0.25s ease";
+    container.style.opacity = 1;
+  }, 150);
 }

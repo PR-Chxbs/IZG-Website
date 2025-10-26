@@ -113,6 +113,17 @@ select {
     font-weight: var(--bold-fw);
 }
 
+.icon-text {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+
+    .icon {
+        align-self: center;
+        width: 20px;
+    }
+}
+
 /* Global header & footer */
 header {
     position: fixed;

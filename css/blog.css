@@ -36,7 +36,7 @@
 }
 
 .blog-card-content {
-  padding: 15px;
+  padding: 15px 20px 40px 20px;
 }
 
 .blog-card h3 {
@@ -64,4 +64,96 @@
   color: #0078ff;
   text-decoration: none;
   font-weight: bold;
+}
+
+/* ===== SKELETON LOADER ===== */
+.skeleton {
+  background: linear-gradient(90deg, #eee 25%, #f9f9f9 37%, #eee 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.4s infinite;
+  border-radius: 6px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+/* Skeleton layout for blog cards */
+.blog-skeletons {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 30px 0px;
+}
+
+.blog-skeleton-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.blog-skeleton-img {
+  height: 180px;
+  width: 100%;
+}
+
+.blog-skeleton-content {
+  padding: 15px;
+}
+
+.blog-skeleton-title {
+  width: 70%;
+  height: 18px;
+  margin-bottom: 12px;
+}
+
+.blog-skeleton-text {
+  width: 90%;
+  height: 12px;
+  margin-bottom: 10px;
+}
+
+/* ===== SINGLE BLOG SKELETON ===== */
+.blog-post-skeleton {
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.blog-skeleton-cover {
+  height: 300px;
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.blog-skeleton-title {
+  height: 26px;
+  width: 70%;
+  margin-bottom: 14px;
+}
+
+.blog-skeleton-author {
+  height: 14px;
+  width: 30%;
+  margin-bottom: 25px;
+}
+
+.blog-skeleton-paragraph {
+  height: 14px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.blog-skeleton-paragraph:nth-child(even) {
+  width: 80%;
 }
