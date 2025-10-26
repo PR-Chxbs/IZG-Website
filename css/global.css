@@ -22,7 +22,7 @@
     --fs-large: 2rem; /* 32px */
     --fs-xlarge: 2.5rem; /* 40px */
 
-    --black-clr: #000;
+    --black-clr: #383838;
     --white-clr: #fff;
 
     
@@ -38,6 +38,7 @@
 
 body {
     font-family: Inter, Roboto;
+    color: var(--black-clr);
 }
 
 li {

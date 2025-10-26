@@ -1,38 +1,46 @@
 console.log("loading");
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const container = document.getElementById("event-container");
+  const container = document.getElementById("event-cards");
 
   try {
     const response = await fetch("https://izg-backend.onrender.com/api/events");
-    const posts = await response.json();
+    const events = await response.json();
+    var eventCounter = 0;
+
     console.log("loading");
     console.log(events);
 
-    posts.forEach(events => {
-      if (!events.published) {
-        
-        return;
-      } 
+    events.forEach(event => {
+      eventCounter += 1;
+      
+      if (eventCounter > 3) {
+        return
+      }
 
       const card = document.createElement("a");
-      card.href = `/blog/${events.slug}`;
-      card.className = "blog-card";
+      const imageUrl = event.image_url ? event.image_url : "../resources/default-event.jpeg"
+      card.href = `./pages/event_details.html?eventId=${event.id}`;
+      card.className = eventCounter == 2 ? "event-card middle" : "event-card";
 
       card.innerHTML = `
-        <img src="../resources/default-event.jpeg" alt="${events.name}" />
-        <div class="content">
-          <h2 class="title">${events.name}</h2>
-          <p class="subtext">${events.description}</p>
-          <p class="date">${new Date(events.published_at).toLocaleDateString()}</p>
-          <p class="date">${new Date(events_date).toLocaleDateString()}</p>
+        <img src=${imageUrl} alt="${event.name}" class="event-image"/>
+        <div class="event-content">
+          <div class="event-details">
+            <p class="date">${new Date(event.event_date).toLocaleDateString()}</p>
+            <p class="location">${event.location}</p>
+          </div>
+          <div class="content">
+            <p class="title">${event.name}</p>
+            <p class="subtext">${event.description}</p>
+          </div>
         </div>
       `;
 
       container.appendChild(card);
     });
 
-    if (eventss.length === 0) {
+    if (events.length === 0) {
       container.innerHTML = "<p>No events available.</p>";
     }
   } catch (err) {

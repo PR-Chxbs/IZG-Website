@@ -71,3 +71,51 @@
         top: 40px;
     }
 }
+
+.events {
+    padding: 0px var(--section-padding);
+
+    .event-cards {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 120px;
+        justify-content: space-between;
+    }
+
+    .event-card {
+        width: 450px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+
+    .event-card.middle {
+        translate: 0px 40px;
+    }
+
+    .event-image {
+        width: 100%;
+    }
+
+    .event-content {
+        padding: 10px 30px 30px 30px;
+    }
+
+    .event-details {
+        display: flex;
+        gap: 12px;
+
+        font-size: var(--fs-xsmall);
+        color: var(--primary-grey-clr);
+    }
+
+    .title {
+        font-size: var(--fs-medium);
+        font-weight: var(--bold-fw);
+        margin-top: 10px;
+    }
+
+    .subtext {
+        margin-top: 10px;
+        
+    }
+}
