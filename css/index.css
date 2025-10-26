@@ -29,3 +29,45 @@
         margin-bottom: 30px;
     }
 }
+
+.about {
+    padding: 200px var(--section-padding);
+    display: flex;
+    gap: 100px;
+    align-items: center;
+
+    .left-container {
+        width: 500px;
+    }
+
+    .subtext {
+        margin-bottom: 40px;
+    }
+    
+    .heading {
+        margin-bottom: 20px;
+    }
+
+    .right-container {
+        position: relative;
+    }
+    .circle-img {
+        position: absolute;
+    }
+
+    .feeding-kids {
+        left: 0;
+        width: 160px;
+    }
+
+    .homeless-shelter {
+        left: 100px;
+        top: 280px;
+        width: 100px;
+    }
+
+    .women-hugging {
+        right: 10px;
+        top: 40px;
+    }
+}

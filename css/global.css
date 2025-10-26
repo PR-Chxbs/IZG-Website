@@ -78,6 +78,14 @@ h1 {
     color: var(--primary-grey-clr);
 }
 
+.heading {
+    font-weight: var(--regular-fw);
+}
+
+.overlay-background {
+    opacity: 0.1;
+}
+
 /* Global header & footer */
 header {
     position: fixed;
