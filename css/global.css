@@ -74,7 +74,7 @@ select {
     padding-right: 40px;
 }
 
-/* Helper styles */
+/* ----- Helper styles ----- */
 .section-padding {
     padding-left: var(--section-padding);
     padding-right: var(--section-padding);
@@ -107,6 +107,10 @@ select {
     position: absolute;
     width: 100%;
     z-index: -1;
+}
+
+.bold {
+    font-weight: var(--bold-fw);
 }
 
 /* Global header & footer */

@@ -9,7 +9,7 @@
 .our-belief-who-we-are {
     display: flex;
     align-items: center;
-    padding: 300px var(--section-padding);
+    padding: 300px var(--section-padding) 100px var(--section-padding);
     gap: 200px;
 
     .taped-image {
@@ -20,15 +20,45 @@
         max-width: 500px;
     }
 
-    .heading {
-        margin-bottom: 20px;
-    }
+    
 
     .our-belief {
         margin-bottom: 80px;
     }
 }
 
+.heading {
+    margin-bottom: 20px;
+}
+
 .help-us {
     display: flex;
+    align-items: center;
+    padding: 100px var(--section-padding);
+    gap: 60px;
+
+    .left-container {
+        position: relative;
+    }
+
+    .circle-img {
+        position: absolute;
+    }
+
+    .feeding-kids {
+        top: 80px;
+        left: 0;
+        width: 160px;
+    }
+
+    .homeless-shelter {
+        left: 100px;
+        top: 360px;
+        width: 100px;
+    }
+
+    .women-hugging {
+        right: 10px;
+        top: 120px;
+    }
 }

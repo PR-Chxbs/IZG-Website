@@ -46,7 +46,7 @@ const fetchEvents = async () => {
     return events;
 }
 
-const renderEventCard = (eventData, parentClass, eventCounter) => {
+const renderEventCard = (eventData, parentClass, eventCounter = 0) => {
   const card = document.createElement("a");
   const imageUrl = eventData.image_url ? eventData.image_url : "../resources/default-event.jpeg";
   card.href = `./pages/event_details.html?eventId=${eventData.id}`;
