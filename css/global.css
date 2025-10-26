@@ -1,0 +1,26 @@
+:root {
+    /* Colors */
+    --primary-logo-clr: #BBA3CE;
+    --secondary-logo-clr: #EF5B8D;
+    --primary-web-clr: #4B0049;
+
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
