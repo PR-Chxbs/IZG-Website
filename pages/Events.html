@@ -27,34 +27,22 @@
 
 	<div class="top-section"></div>
 
-	<section class="upcoming-events">
-		<h1 class="section-title">Events</h1>
-		<p class="section-subtitle">See what we're doing and how you can join</p>
-		<div class="events-container">
-			<div class="event-card">
-				<img class="event-img" src="../resources/Pad Drive.jpg">
-				<div class="event-info">
-					<h3>Pad Drive</h3>
-					<p>From April, 20th 2025</p>
-					<a href="../resources/Pad Drive.jpg"><button class="details-btn">View Details</button></a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="past-events">
-		<h1 class="section-title">Past Events</h1>
-		<p class="section-subtitle">See what we've done</p>
-		<div class="events-container">
-			<div class="event-card">
-				<img class="event-img" src="../resources/event2.jpg">
-				<div class="event-info">
-					<h3>Opening Launch</h3>
-					<p>December, 9th, 2023</p>
-					<a href="../resources/Pad Drive.jpg"><button class="details-btn">View Details</button></a>
-				</div>
-			</div>
-		</div>
-	</section>
+	<main class="events">
+    	<section id="upcoming-section" class="upcoming-section">
+      		<h2>Upcoming Events</h2>
+    		<div id="upcoming-events" class="event-cards">
+	        	<!-- Dynamically filled content -->
+      		</div>
+    	</section>
+
+    	<section id="past-section">
+      		<h2>Past Events</h2>
+      		<div id="past-events" class="event-cards">
+        		<!-- Dynamically filled content -->
+      		</div>
+    	</section>
+  	</main>
+
 	<!-- Footer -->
 	<footer> 
 		<div class="main">
@@ -68,5 +56,6 @@
 		</div>
 		<p class="copyright">&copy;Izandla Ziya Gezana All Rights Reserved<br/>Designed and developed by Dev</p>
   	</footer>
+	<script src="../js/events.js" type="module"></script>
 </body>
 </html>
