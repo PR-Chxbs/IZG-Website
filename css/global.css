@@ -53,6 +53,10 @@ button {
     font-family: inherit;
 }
 
+h1 {
+    font-weight: var(--regular-fw);
+}
+
 /* Helper styles */
 .section-padding {
     padding-left: var(--section-padding);
@@ -70,6 +74,10 @@ button {
     padding-top: 82px;
 }
 
+.subtext {
+    color: var(--primary-grey-clr);
+}
+
 /* Global header & footer */
 header {
     position: fixed;
@@ -79,6 +87,7 @@ header {
     justify-content: space-between;
     padding: 10px var(--section-padding);
     background-color: var(--white-clr);
+    z-index: 1;
 
     .logo {
         width: 100px;
@@ -87,6 +96,10 @@ header {
     ul {
         display: flex;
         gap: 40px;
+    }
+
+    .active {
+        color: var(--primary-logo-clr);
     }
 }
 
