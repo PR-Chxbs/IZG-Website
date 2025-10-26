@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/global.css">
   <link rel="stylesheet" href="./css/index.css">
-  <title>Home</title>
+  <link rel="shortcut icon" href="./resources/izg_full_color_logo.png" type="image/x-icon">
+  <title>IZG - Welcome to IZG</title>
 </head>
 
 <body>
@@ -29,7 +30,7 @@
   <!-- <div class="top-section"></div> -->
 
   <section class="hero">
-    <img src="./resources/izg_hero_helping_hand.png" alt="IZG Helping hand" class="hero-background">
+    <img src="./resources/izg_hero_helping_hand.png" alt="IZG Helping hand" class="hero-background section-background">
     <div class="hero-content">
       <p class="description">NGO • Donations • Feeding Schemes</p>
       <h1 class="headline">We Are The Helping Hand Assisting All Those In Need</h1>
@@ -63,13 +64,45 @@
   </section>
 
   <section id="contact" class="contact">
+    <img src="./resources/conference_background_image.png" alt="Conference Background" class="conference-background section-background">
     <div class="container">
-      <h2>Get Involved</h2>
-      <p>Support our organization by volunteering or donating</p>
-      <img src= "./resources/izg donate.jpg" margin-top: 1rem; max-width: 100%; height: auto; border-radius: 10px; />
-      
-      <h2>Want to get in touch or contribute?</h2>
-      <a href="./pages/ContactUs.html" class="cta-btn">Contact Us</a>
+		<div class="left-container">
+			<h1 class="heading">Join the cause today, enquire with us to make a change as soon as possible</h1>
+			<p class="subtext">Izandla Ziya Gezana is a Non-Governement Organization that focuses on assisting the underprivileged and homeless with hygiene products and food parcels</p>
+		</div>
+		<form class="contact-form">
+			<!-- Full Name -->
+			<div class="labelled-input">
+				<label for="full-name">Full Name</label>
+				<input type="text" name="full-name" id="full-name" placeholder="e.g. John Doe">
+			</div>
+
+			<!-- Email -->
+			<div class="labelled-input">
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email" placeholder="e.g. johnd@gmail.com">
+			</div>
+
+			<!-- Phone Number -->
+			<div class="labelled-input">
+				<label for="phone-number">Phone Number</label>
+				<input type="text" name="phone-number" id="phone-number" placeholder="e.g. +27 12 710 3921">
+			</div>
+
+			<!-- Type of inquiry -->
+			<div class="labelled-input">
+				<label for="type-of-inquiry">Type of Inquiry</label>
+				<select name="type-of-inquiry" id="type-of-inquiry">
+					<option value="" selected disabled>Select an option</option>
+					<option value="donation">Donation</option>
+					<option value="assistance">Need a helping hand</option>
+					<option value="other">Other</option>
+				</select>
+			</div>
+
+			<!-- Submit button -->
+			<button type="submit" class="btn submit-btn">Submit</button>
+		</form>
     </div>
   </section>
 

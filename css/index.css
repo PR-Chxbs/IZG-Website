@@ -119,3 +119,59 @@
         
     }
 }
+
+.contact {
+    margin-top: 200px;
+    position: relative;
+    display: flex;
+
+    .container {
+        margin-top: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 var(--section-padding);
+    }
+
+    .labelled-input {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input, select {
+        border: solid 1px var(--secondary-grey-clr);
+    }
+
+    input, select, .submit-btn {
+        padding: 20px 24px;
+    }
+
+    .left-container {
+        margin-top: 40px;
+        width: 500px;
+    }
+
+    .heading {
+        width: 440px;
+        margin-bottom: 10px;
+    }
+
+    .submit-btn {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .contact-form {
+        width: 600px;
+        padding: 60px 50px 100px 50px;
+        background-color: var(--white-clr);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+}
+
+footer {
+    margin-top: 200px;
+}
