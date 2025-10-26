@@ -1,49 +1,7 @@
-/* button styles */
-.home {
-    color: white;
-    margin-right: 15px;
-    text-decoration: wavy;
-    font-weight: bold;
-}
+.hero {
 
-.about {
-    color: orchid;
-    margin-right: 15px;
-    text-decoration: wavy;
-    font-weight: bold;
-}
-
-.contact {
-    color: white;
-    margin-right: 15px;
-    text-decoration: wavy;
-    font-weight: bold;
-}
-
-.events {
-    color: white;
-    margin-right: 15px;
-    text-decoration: wavy;
-    font-weight: bold;
-}
-
-.blog {
-    color: white;
-    margin-left: 10px;
-    text-decoration: wavy;
-    font-weight: bold;
-}
-
-.page-name {
-    font-size: 35px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.quote {
-    font-style: italic;
-    text-align: center;
-    margin: 20px;
-    color: #333;
+    .content {
+        padding: 300px var(--section-padding);
+        width: 450px;
+    }
 }
