@@ -15,10 +15,11 @@ function decodeJWT(token) {
 }
 
 function checkAuthorization() {
-    const token = localStorage.getItem("jwt_token");
+    const token = localStorage.getItem("authToken");
 
     // No token? Not logged in →
     if (!token) {
+        console.log("No token set");
         redirectToLogin();
         return;
     }
@@ -27,6 +28,7 @@ function checkAuthorization() {
 
     // Invalid token?
     if (!payload) {
+        console.log("Invalid token");
         redirectToLogin();
         return;
     }
@@ -34,17 +36,19 @@ function checkAuthorization() {
     // Check expiry
     const currentTime = Math.floor(Date.now() / 1000);
     if (payload.exp < currentTime) {
-        localStorage.removeItem("jwt_token");
+        localStorage.removeItem("authToken");
+        console.log("Token expired");
         redirectToLogin();
         return;
     }
 
     if (payload.role !== "Admin") {
+        console.log("User not authorized!!!");
         redirectToLogin();
         return;
     }
 
-    // // If we reach here → Access granted ✅
+    // If we reach here → Access granted ✅
     // console.log("User authorized:", payload);
 }
 
