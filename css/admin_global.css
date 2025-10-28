@@ -91,6 +91,15 @@ main.main-content {
     background-color: var(--primary-variant-2-clr);
 }
 
+.nav-item.logout-btn {
+    background-color: var(--primary-logo-clr);
+    font-family: inherit;
+
+    p {
+        font-family: inherit;
+    }
+}
+
 .table-actions-container {
     display: flex;
     justify-content: end;
@@ -202,7 +211,7 @@ input {
 }
 
 button {
-    background-color: var(--primary-clr);
+    background-color: var(--primary-logo-clr);
     color: white;
     border: none;
 }

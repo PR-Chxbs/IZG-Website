@@ -43,12 +43,17 @@ const sideNavHTML =
                 </li>
             </ul>
         </div>
-        <a class="nav-item">
+        <button class="nav-item logout-btn" onclick="logout()">
             <img src="/resources/icons/settings_nav_icon.png" alt="Settings Icon" />
             <p>Settings</p>
-        </a>
+        </button>
         `;
 
 sideNav.innerHTML = sideNavHTML;
 
 const currentPath = window.location.pathname;
+
+function logout() {
+    localStorage.removeItem("jwt_token");
+    window.location.href = "/auth/login.html";
+}
