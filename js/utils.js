@@ -71,3 +71,54 @@ export const decodeJWT = (token) => {
 export const getApiUrl = () => {
   return "https://izg-backend.onrender.com/api";
 }
+
+// confirmationDialog.js
+export const showConfirmationDialog = async (heading, description, cancelText, proceedText) => {
+    return new Promise((resolve) => {
+        // Create the overlay
+        const overlay = document.createElement("div");
+        overlay.classList.add("confirm-overlay");
+
+        // Create the dialog box
+        const dialog = document.createElement("div");
+        dialog.classList.add("confirm-dialog");
+
+        dialog.innerHTML = `
+            <h2>${heading}</h2>
+            <p>${description}</p>
+            <div class="confirm-actions">
+                <button id="confirm-cancel-btn" class="cancel-btn">${cancelText}</button>
+                <button id="confirm-proceed-btn" class="proceed-btn">${proceedText}</button>
+            </div>
+        `;
+
+        overlay.appendChild(dialog);
+        document.body.appendChild(overlay);
+
+        // Animate in
+        requestAnimationFrame(() => {
+            overlay.classList.add("show");
+            dialog.classList.add("show");
+        });
+
+        // Event handlers
+        document.getElementById("confirm-cancel-btn").addEventListener("click", () => {
+            close(false);
+        });
+
+        document.getElementById("confirm-proceed-btn").addEventListener("click", () => {
+            close(true);
+        });
+
+        function close(result) {
+            // Animate out
+            overlay.classList.remove("show");
+            dialog.classList.remove("show");
+
+            setTimeout(() => {
+                document.body.removeChild(overlay);
+                resolve(result);
+            }, 250);
+        }
+    });
+}
