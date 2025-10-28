@@ -18,7 +18,7 @@ const sideNavHTML =
                     </a>
                 </li>
                 <li>
-                    <a class="nav-item">
+                    <a class="nav-item" href="/admin/events.html">
                         <img src="../resources/icons/events_nav_icon.png" alt="Events Icon" />
                         <p>Events</p>
                     </a>
@@ -52,4 +52,3 @@ const sideNavHTML =
 sideNav.innerHTML = sideNavHTML;
 
 const currentPath = window.location.pathname;
-console.log(currentPath);

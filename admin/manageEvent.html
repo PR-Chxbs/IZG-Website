@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/vars.css">
+    <link rel="stylesheet" href="../css/admin_global.css">
+    <link rel="stylesheet" href="../css/admin-events.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav id="side-nav" class="side-nav" role="navigation">
+        <!-- Injected Dynamically -->
+    </nav>
+
+    <main class="main-content">
+        <!-- Event Form -->
+        <section class="event-form">
+            <h2 id="form-title">Create New Event</h2>
+            <form id="eventForm">
+                <input type="hidden" id="event_id">
+
+                <label>Name</label>
+                <input type="text" id="name" required>
+
+                <label>Description</label>
+                <textarea id="description" required></textarea>
+
+                <label>Event Date</label>
+                <input type="date" id="event_date" required>
+
+                <label>Location</label>
+                <input type="text" id="location" required>
+
+                <label>Start Time</label>
+                <input type="time" id="start_time" required>
+
+                <label>End Time</label>
+                <input type="time" id="end_time" required>
+
+                <label>Image URL</label>
+                <input type="text" id="image_url">
+
+                <button type="submit" id="submitBtn">Create Event</button>
+            </form>
+        </section>
+    </main>
+
+    <div id="snackbar"></div>
+
+    <script src="/js/authGuard.js"></script>
+    <script src="/js/injectNav.js"></script>
+    <script src="/js/manageEvents.js" type="module"></script>
+</body>
+</html>

@@ -47,3 +47,27 @@ export const fetchEvents = async () => {
 
     return events;
 }
+
+export const showSnackbar = (message) => {
+    const sb = document.getElementById('snackbar');
+    sb.textContent = message;
+    sb.classList.add('show');
+
+    setTimeout(() => {
+        sb.classList.remove('show');
+    }, 3000); // hides after 3s
+}
+
+export const decodeJWT = (token) => {
+    try {
+        const base64Payload = token.split(".")[1];
+        const decodedPayload = atob(base64Payload);
+        return JSON.parse(decodedPayload);
+    } catch (error) {
+        return null;
+    }
+}
+
+export const getApiUrl = () => {
+  return "https://izg-backend.onrender.com/api/events";
+}
