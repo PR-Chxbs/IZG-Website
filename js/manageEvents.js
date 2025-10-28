@@ -18,6 +18,8 @@ const form = document.getElementById("eventForm");
 const formTitle = document.getElementById("form-title");
 const submitBtn = document.getElementById("submitBtn");
 
+document.title = eventId ? "Admin | Edit Event" : "Admin | Create Event"
+
 // Handle form submission (Create or Update)
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -34,6 +36,7 @@ form.addEventListener("submit", async (e) => {
   };
 
   const eventId = document.getElementById("event_id").value;
+
   const method = eventId ? "PUT" : "POST";
   const url = eventId ? `${API_URL}/${eventId}` : API_URL;
 

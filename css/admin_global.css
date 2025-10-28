@@ -316,3 +316,17 @@ button:hover {
 .proceed-btn:hover {
     background: #c62828;
 }
+
+.form-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.labelled-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}

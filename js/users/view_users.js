@@ -47,7 +47,7 @@ async function loadUsers() {
 loadUsers();
 
 function editEvent (id) {
-    window.location.href = `/admin/manageUsers.html?userId=${id}`;
+    window.location.href = `/admin/manageUser.html?userId=${id}`;
 }
 
 async function deleteEvent (id) {
