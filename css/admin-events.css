@@ -20,19 +20,6 @@ form input, form textarea {
   border: 1px solid #ccc;
 }
 
-button {
-  background-color: #007bff;
-  color: white;
-  padding: 0.7rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button.delete {
-  background-color: #dc3545;
-}
-
 button:hover {
   opacity: 0.9;
 }

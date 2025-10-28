@@ -13,14 +13,40 @@
         <!-- Injected Dynamically -->
     </nav>
 
-    <main class="main-content">
+    <div class="btn-container">
+        <div class="btn" href="/admin/manageUser.html">+ Add user</div>
+    </div>
 
+    <main class="main-content">
+        <section class="user-list">
+            <h2>All users</h2>
+            <div class="btn-container">
+                <a href="/admin/manageUser.html" class="btn">+ Add User</a>
+            </div>
+            <table id="usersTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Gender</th>
+                        <th>Phone Number</th>
+                        <th>Role</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Injected dynamically -->
+                </tbody>
+            </table>
+        </section>
     </main>
 
     <div id="snackbar"></div>
 
     <script src="/js/authGuard.js"></script>
     <script src="/js/injectNav.js"></script>
-
+    <script src="/js/users/view_users.js" type="module"></script>
 </body>
 </html>

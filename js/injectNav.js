@@ -24,21 +24,21 @@ const sideNavHTML =
                     </a>
                 </li>
                 <li>
-                    <a class="nav-item">
-                        <img src="../resources/icons/resources_nav_icon.png" alt="Donations Icon" />
-                        <p>Donations</p>
+                    <a class="nav-item" href="/admin/blogs.html">
+                        <img src="../resources/icons/resources_nav_icon.png" alt="Blog Icon" />
+                        <p>Blog posts</p>
                     </a>
                 </li>
                 <li>
-                    <a class="nav-item">
+                    <a class="nav-item" href="/admin/resources.html">
                         <img src="../resources/icons/resources_nav_icon.png" alt="Resources Icon" />
                         <p>Resources</p>
                     </a>
                 </li>
                 <li>
-                    <a class="nav-item">
-                        <img src="../resources/icons/assignments_nav_icon.png" alt="Assignments Icon" />
-                        <p>Assignments</p>
+                    <a class="nav-item" href="/admin/categories.html">
+                        <img src="../resources/icons/assignments_nav_icon.png" alt="Categories Icon" />
+                        <p>Categories</p>
                     </a>
                 </li>
             </ul>

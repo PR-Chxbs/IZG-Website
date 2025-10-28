@@ -100,6 +100,11 @@ main.main-content {
     }
 }
 
+.btn-container {
+    display: flex;
+    justify-content: end;
+}
+
 .table-actions-container {
     display: flex;
     justify-content: end;
@@ -239,4 +244,75 @@ button:hover {
 #snackbar.show {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
+}
+
+.confirm-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 99999;
+}
+
+.confirm-overlay.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.confirm-dialog {
+    background: #333;
+    border-radius: 10px;
+    padding: 24px;
+    width: 350px;
+    transform: translateY(30px);
+    transition: transform 0.25s ease;
+    text-align: center;
+}
+
+.confirm-dialog.show {
+    transform: translateY(0);
+}
+
+.confirm-dialog h2 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.confirm-dialog p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: white;
+}
+
+.confirm-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.cancel-btn, .proceed-btn {
+    flex: 1;
+    padding: 10px 0;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.cancel-btn {
+    background: #ddd;
+    color: black;
+}
+
+.proceed-btn {
+    background: #e53935;
+    color: white;
+}
+
+.proceed-btn:hover {
+    background: #c62828;
 }
