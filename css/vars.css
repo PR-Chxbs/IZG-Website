@@ -1,0 +1,36 @@
+:root {
+    /* Colors */
+    --primary-logo-clr: #BBA3CE;
+    --secondary-logo-clr: #EF5B8D;
+    --primary-web-clr: #4B0049;
+    
+    --primary-grey-clr: #545454;
+    --secondary-grey-clr: #C0C0C0;
+
+    --primary-variant-2-clr: #D8CAE3;
+
+    --regular-fw: 400;
+    --medium-fw: 500;
+    --semibold-fw: 600;
+    --bold-fw: 700;
+    --xbold-fw: 800;
+    --black-fw: 900;
+
+    /* Font size vars */
+    --fs-xsmall: 0.75rem; /* 12px */
+    --fs-small: 1rem; /* 16px */
+    --fs-regular: 1.25rem; /* 20px */
+    --fs-medium: 1.5rem; /* 24px */
+    --fs-large: 2rem; /* 32px */
+    --fs-xlarge: 2.5rem; /* 40px */
+
+    --black-clr: #383838;
+    --white-clr: #fff;
+
+    --font-family: Inter, Roboto;
+
+    /* Cursor */
+    --cursor-pointer: pointer;
+
+    --section-padding: 30px;
+}

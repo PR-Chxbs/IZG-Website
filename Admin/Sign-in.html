@@ -3,31 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
     <link rel="stylesheet" href="../css/sign-in.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="shortcut icon" href="../resources/izg_full_color_logo.png" type="image/x-icon">
+    <title>Sign In</title>
+    
 </head>
 
 <body>
-    <header class="header">
-        <div class="logo">
-            <a href="../index.html">
-                <img src="../resources/IZG Full Color Logo.png" alt="Logo">
-            </a>
+    <img src="../resources/auth_background_image.png" alt="Auth Background Image" class="background-image"/>
+    <main class="auth">
+        <div class="form-container">
+        <div class="image-container">
+            <img src="../resources/izg_full_color_logo.png" alt="Gift of the givers logo" class="logo" />
         </div>
-    </header>
 
-    <section class="sign-in-form">
-        <form id="signinform">
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br>
+        <h1>Welcome back!</h1>
+        <p>Are you a new user? <a class="underline">Register here</a></p>
 
-            <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password" required><br>
+        <form id="loginForm">
+            <label for="Email">Email</label>
+            <input type="text" placeholder="Enter email" name="Email" id="email" required />
 
-            <button class="submit-button" type="submit">Sign In</button>
+            <label for="Password">Password</label>
+            <input type="password" placeholder="Enter password" name="Password" id="password" required />
+
+            <div>
+                <input type="checkbox" name="RememberMe" value="true" />
+                <label for="RememberMe">Remember Me</label>
+            </div>
+
+            <button type="submit">Submit</button>
         </form>
-    </section>
-
+        <a><p class="underline">Forgot password?</p></a>
+    </div>
+    </main>
     <script src="../js/sign-in.js"></script>
 </body>
 </html>

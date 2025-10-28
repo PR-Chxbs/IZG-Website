@@ -7,6 +7,8 @@
     --primary-grey-clr: #545454;
     --secondary-grey-clr: #C0C0C0;
 
+    --primary-variant-2-clr: #D8CAE3;
+
     --regular-fw: 400;
     --medium-fw: 500;
     --semibold-fw: 600;
@@ -25,6 +27,8 @@
     --black-clr: #383838;
     --white-clr: #fff;
 
+    --font-family: Inter, Roboto;
+
     /* Cursor */
     --cursor-pointer: pointer;
 
@@ -38,7 +42,7 @@
 }
 
 body {
-    font-family: Inter, Roboto;
+    font-family: var(--font-family);
     color: var(--black-clr);
 }
 
@@ -122,6 +126,10 @@ select {
         align-self: center;
         width: 20px;
     }
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 /* Global header & footer */

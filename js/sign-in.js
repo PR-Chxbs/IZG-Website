@@ -1,6 +1,6 @@
 const apiBaseUrl = "https://izg-backend.onrender.com/api";
 
-document.getElementById("signinform").addEventListener("submit", async function (event) {
+document.getElementById("loginForm").addEventListener("submit", async function (event) {
   event.preventDefault();
 
   const email = document.getElementById("email").value.trim();
