@@ -29,7 +29,7 @@ document.getElementById("loginForm").addEventListener("submit", async function (
       localStorage.setItem("authToken", data.token);
 
       alert(`Welcome back, ${data.user?.name || "Admin"}!`);
-      window.location.href = "./adminEvents.html";
+      window.location.href = "/admin/adminEvents.html";
     } else {
       alert("Invalid login. Please check your credentials.");
     }
