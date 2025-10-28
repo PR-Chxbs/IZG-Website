@@ -6,13 +6,13 @@ const sideNavHTML =
             <img src="../resources/izg_full_color_logo.png" alt="Izandla Ziya Gezana Logo" class="logo"/>
             <ul class="main-nav-items">
                 <li>
-                    <a class="nav-item">
+                    <a class="nav-item" href="/admin">
                         <img src="../resources/icons/home_nav_icon.png" alt="Home Icon"/>
                         <p>Home</p>
                     </a>
                 </li>
                 <li>
-                    <a class="nav-item">
+                    <a class="nav-item" href="/admin/users.html">
                         <img src="../resources/icons/users_nav_icon.png" alt="Users Icon" />
                         <p>Users</p>
                     </a>
@@ -45,7 +45,7 @@ const sideNavHTML =
         </div>
         <button class="nav-item logout-btn" onclick="logout()">
             <img src="/resources/icons/settings_nav_icon.png" alt="Settings Icon" />
-            <p>Settings</p>
+            <p>Logout</p>
         </button>
         `;
 
@@ -54,6 +54,6 @@ sideNav.innerHTML = sideNavHTML;
 const currentPath = window.location.pathname;
 
 function logout() {
-    localStorage.removeItem("jwt_token");
+    localStorage.removeItem("authToken");
     window.location.href = "/auth/login.html";
 }

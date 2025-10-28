@@ -1,4 +1,6 @@
-const apiBaseUrl = "https://izg-backend.onrender.com/api";
+import { getApiUrl, decodeJWT, showSnackbar } from "./utils.js";
+
+const apiBaseUrl = getApiUrl();
 
 document.getElementById("loginForm").addEventListener("submit", async function (event) {
   event.preventDefault();
@@ -7,7 +9,7 @@ document.getElementById("loginForm").addEventListener("submit", async function (
   const password = document.getElementById("password").value.trim();
 
   if (!email || !password) {
-    alert("Please enter both email and password.");
+    showSnackbar("Please enter both email and password.");
     return;
   }
 
@@ -27,14 +29,19 @@ document.getElementById("loginForm").addEventListener("submit", async function (
     if (data && data.token) {
       // Store token for authenticated requests
       localStorage.setItem("authToken", data.token);
+      const payload = decodeJWT(data.token);
 
-      alert(`Welcome back, ${data.user?.name || "Admin"}!`);
+      if (payload.role !== "Admin") {
+        showSnackbar(`User not authorized!`);
+        return
+      }
+
       window.location.href = "/admin/events.html";
     } else {
-      alert("Invalid login. Please check your credentials.");
+      showSnackbar("Invalid login. Please check your credentials.");
     }
   } catch (error) {
     console.error("Login error:", error);
-    alert("Login failed. Please try again later.");
+    showSnackbar("Login failed. Please try again later.");
   }
 });

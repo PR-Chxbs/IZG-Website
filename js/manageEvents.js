@@ -2,7 +2,7 @@ import { decodeJWT, showSnackbar, getApiUrl } from "./utils.js";
 
 const params = new URLSearchParams(window.location.search);
 const eventId = params.get("eventId");
-const API_URL = getApiUrl();
+const API_URL = `${getApiUrl()}/events`;
 
 if (eventId) {
     editEvent(eventId);

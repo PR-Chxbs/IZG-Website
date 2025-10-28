@@ -69,5 +69,5 @@ export const decodeJWT = (token) => {
 }
 
 export const getApiUrl = () => {
-  return "https://izg-backend.onrender.com/api/events";
+  return "https://izg-backend.onrender.com/api";
 }

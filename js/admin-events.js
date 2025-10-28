@@ -1,6 +1,6 @@
 import { decodeJWT, showSnackbar, getApiUrl } from "./utils.js";
 
-const API_URL = getApiUrl();
+const API_URL = `${getApiUrl()}/events`;
 
 const token = localStorage.getItem("authToken");
 const payload = decodeJWT(token);
