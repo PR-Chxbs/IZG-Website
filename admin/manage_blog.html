@@ -14,13 +14,64 @@
     </nav>
 
     <main class="main-content">
+        <h2 id="heading">Create User</h2>
+        <form id="userForm">
+            <input type="hidden" id="user_id">
 
+            <!-- Author Name -->
+            <div class="form-row">
+                <div class="labelled-input">
+                    <label for="author-id">Author Name</label>
+                    <select name="author-id" id="author-id">
+                        <option value="" selected>Select author...</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Title -->
+            <div class="form-row">
+                <div class="labelled-input">
+                    <label for="title">Title</label>
+                    <input type="text" placeholder="e.g. Ten Ways To Protect Yourself This Summer" name="title" id="title" required>
+                </div>
+                <div class="labelled-input">
+                    <label for="slug">Slug</label>
+                    <input type="text" placeholder="e.g. ten-ways-to-protect-yourself-this-summer" id="slug" name="slug" required>
+                </div>
+            </div>
+
+            <!-- Cover Image -->
+            <div class="form-row">
+                <div class="labelled-input">
+                    <label for="cover_image">Cover Image</label>
+                    <input type="text" placeholder="e.g. https://imgur.com/ngo.png?w=1000" id="cover_image" name="phone_number" required>
+                </div>
+                <div class="labelled-input">
+                    <label for="published">Publication Status</label>
+                    <select name="published" id="published" required>
+                        <option value="" selected>Select publication status...</option>
+                        <option value="published">Published</option>
+                        <option value="unpublished">Unpublished</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="form-row">
+                <div class="labelled-input">
+                    <label for="content">Content</label>
+                    <textarea name="content" id="content" placeholder="Enter your content here"></textarea>
+                </div>
+            </div>
+
+            <button type="submit" id="submit-btn">Create User</button>
+        </form>
     </main>
 
     <div id="snackbar"></div>
 
     <script src="/js/authGuard.js"></script>
     <script src="/js/injectNav.js"></script>
-
+    <script src="/js/blogs/manage_blogs.js" type="module"></script>
 </body>
 </html>
