@@ -1,6 +1,6 @@
 import { renderEventCard, fetchEvents } from "./utils.js";
 
-console.log("loading");
+// console.log("loading");
 
 document.addEventListener("DOMContentLoaded", async () => {
   const container = document.getElementById("event-cards");

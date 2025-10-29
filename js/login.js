@@ -2,6 +2,8 @@ import { getApiUrl, decodeJWT, showSnackbar } from "./utils.js";
 
 const apiBaseUrl = getApiUrl();
 
+checkSession();
+
 document.getElementById("logo").addEventListener("click", () => {
   window.location.href = "/"
 })
@@ -11,6 +13,7 @@ document.getElementById("loginForm").addEventListener("submit", async function (
 
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value.trim();
+  const rememberMe = document.getElementById("remember-me").checked;
 
   if (!email || !password) {
     showSnackbar("Please enter both email and password.");
@@ -31,8 +34,6 @@ document.getElementById("loginForm").addEventListener("submit", async function (
     const data = await response.json();
 
     if (data && data.token) {
-      // Store token for authenticated requests
-      localStorage.setItem("authToken", data.token);
       const payload = decodeJWT(data.token);
 
       if (payload.role !== "Admin") {
@@ -40,7 +41,11 @@ document.getElementById("loginForm").addEventListener("submit", async function (
         return
       }
 
-      window.location.href = "/admin/events.html";
+      // Store token for authenticated requests
+      localStorage.setItem("authToken", data.token);
+      localStorage.setItem("rememberMe", rememberMe);
+
+      window.location.href = "/admin";
     } else {
       showSnackbar("Invalid login. Please check your credentials.");
     }
@@ -49,3 +54,29 @@ document.getElementById("loginForm").addEventListener("submit", async function (
     showSnackbar("Login failed. Please try again later.");
   }
 });
+
+function checkSession() {
+  const localRememberMe = localStorage.getItem("rememberMe") === "true" ? true : false;
+  const token = localStorage.getItem("authToken");
+
+  if (!token) {
+    localStorage.removeItem("rememberMe");
+    return;
+  }
+
+  // console.log(`(checkSession) Remember Me: ${localRememberMe}`);
+  if (localRememberMe) {
+    const payload = decodeJWT(token);
+
+    const currentTime = Math.floor(Date.now() / 1000);
+    if (payload.exp < currentTime) {
+        localStorage.removeItem("authToken");
+        localStorage.removeItem("rememberMe");
+        showSnackbar("Session expired. Login again.");
+        return;
+    }
+
+    console.log("Redirecting...");
+    window.location.href = "/admin";
+  }
+}

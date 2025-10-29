@@ -7,6 +7,11 @@ const token = localStorage.getItem("authToken");
 // DOM elements
 const tableBody = document.getElementById("tableBody");
 
+document.getElementById("refresh-btn").addEventListener("click", () => {
+    console.log("Refreshing list");
+    loadUsers();
+});
+
 async function loadUsers() {
     try {
         const res = await fetch(API_URL, {

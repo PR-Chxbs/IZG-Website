@@ -33,8 +33,8 @@ export const fetchEvents = async () => {
   const response = await fetch("https://izg-backend.onrender.com/api/events");
     let events = await response.json();
     
-    console.log("loading");
-    console.log(events);
+    // console.log("loading");
+    // console.log(events);
 
     // 🔹 Convert event_date strings to Date objects
     events = events.map(event => ({

@@ -9,19 +9,20 @@
     <title>Admin | View all users</title>
 </head>
 <body>
+    <style>
+        #refresh-btn:hover {
+            cursor: var(--cursor-pointer);
+        }
+    </style>
     <nav id="side-nav" class="side-nav" role="navigation">
         <!-- Injected Dynamically -->
     </nav>
-
-    <div class="btn-container">
-        <div id="refresh-btn" class="btn"><p>Refresh</p></div>
-        <div class="btn" href="/admin/manageUser.html">+ Add user</div>
-    </div>
 
     <main class="main-content">
         <section class="user-list">
             <h2>All users</h2>
             <div class="btn-container">
+                <div id="refresh-btn" class="btn"><p>Refresh</p></div>
                 <a href="/admin/manageUser.html" class="btn">+ Add User</a>
             </div>
             <table id="usersTable">

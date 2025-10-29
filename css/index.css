@@ -80,8 +80,8 @@
         margin-top: 30px;
         display: flex;
         flex-wrap: wrap;
+        gap: 40px;
         row-gap: 120px;
-        justify-content: space-between;
     }
 
     .event-card {
