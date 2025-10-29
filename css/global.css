@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
     /* Colors */
     --primary-logo-clr: #BBA3CE;
@@ -205,4 +207,10 @@ footer {
 #snackbar.show {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
+}
+
+@media (min-width: 1600px) {
+    :root {
+        --section-padding: 200px;
+    }
 }

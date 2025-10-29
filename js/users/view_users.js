@@ -29,6 +29,7 @@ async function loadUsers() {
                 <td>${user.second_name}</td>
                 <td>${user.gender}</td>
                 <td>${user.phone_number}</td>
+                <td>${user.email}</td>
                 <td>${user.role}</td>
                 <td>
                     <button onclick="editEvent(${user.id})" class="btn-secondary">Edit</button>

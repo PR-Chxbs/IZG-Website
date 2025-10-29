@@ -2,8 +2,8 @@ import { showSnackbar, getApiUrl } from "../utils.js";
 
 const params = new URLSearchParams(window.location.search);
 const userId = params.get("userId");
-//const API_URL = `${getApiUrl()}/users`;
-const API_URL = `http://localhost:5000/api/users`;
+const API_URL = `${getApiUrl()}/users`;
+//const API_URL = `http://localhost:5000/api/users`;
 const token = localStorage.getItem("authToken");
 
 const form = document.getElementById("userForm");

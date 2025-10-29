@@ -14,13 +14,36 @@
     </nav>
 
     <main class="main-content">
-
+        <section class="blog-list">
+            <h2>All users</h2>
+            <div class="btn-container">
+                <a href="/admin/manageBlog.html" class="btn">+ Add Blog Post</a>
+            </div>
+            <table id="blogTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Author</th>
+                        <th>Title</th>
+                        <th>Slug</th>
+                        <th>Content</th>
+                        <th>Cover Image Url</th>
+                        <th>Published At</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Injected dynamically -->
+                </tbody>
+            </table>
+        </section>
     </main>
 
     <div id="snackbar"></div>
 
     <script src="/js/authGuard.js"></script>
     <script src="/js/injectNav.js"></script>
+    <script src="/js/blogs/view_blogs.js"></script>
 
 </body>
 </html>
