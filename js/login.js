@@ -2,6 +2,10 @@ import { getApiUrl, decodeJWT, showSnackbar } from "./utils.js";
 
 const apiBaseUrl = getApiUrl();
 
+document.getElementById("logo").addEventListener("click", () => {
+  window.location.href = "/"
+})
+
 document.getElementById("loginForm").addEventListener("submit", async function (event) {
   event.preventDefault();
 
