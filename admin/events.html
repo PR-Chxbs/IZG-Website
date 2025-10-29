@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/vars.css">
+  <link rel="stylesheet" href="../css/admin_global.css">
+  <link rel="stylesheet" href="../css/admin-events.css">
+  <link rel="shortcut icon" href="/resources/izg_full_color_logo.png" type="image/x-icon">
+  <title>Admin | View all events</title>
+</head>
+<body>
+    <nav id="side-nav" class="side-nav" role="navigation">
+        <!-- Injected Dynamically -->
+    </nav>
+
+    <main class="main-content">
+
+      <!-- Events List -->
+      <section class="event-list">
+        <h2>All Events</h2>
+
+        <div class="btn-container">
+          <a href="/admin/manageEvent.html" class="btn">+ Add event</a>
+        </div>
+        
+        <table id="eventsTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Date</th>
+              <th>Location</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="eventsBody">
+              
+            <!-- Events will load here -->
+          </tbody>
+        </table>
+      </section>
+  </main>
+
+  <div id="snackbar"></div>
+
+  <script src="/js/authGuard.js"></script>
+  <script src="/js/injectNav.js"></script>
+  <script src="/js/admin-events.js" type="module"></script>
+</body>
+</html>

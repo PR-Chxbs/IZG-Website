@@ -1,95 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">    
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="./css/homeStyles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="shortcut icon" href="/resources/izg_full_color_logo.png" type="image/x-icon">
+  <title>IZG - Welcome to IZG</title>
 </head>
 
 <body>
- <header>
-    <div class="logo">
-      <a href="./index.html"> <img src="./resources/IZG Full Color Logo.png" alt="Company Logo"> </a>
-    </div>
+	<header>
+		<a href="/">
+			<img src="/resources/izg_full_color_logo.png" alt="Company Logo" class="logo" />
+		</a>
+		<nav>
+		  	<ul class="nav-links">
+				<li><a href="/" class="active">Home</a></li>
+				<li><a href="/pages/aboutUs.html">About</a></li>
+				<li><a href="/pages/events.html">Events</a></li>
+				<li><a href="/pages/blogs.html">Blog</a></li>
+				<li><a href="/pages/contactUs.html">Contact Us</a></li>
+				<li><a href="/auth/login.html" class="btn">Login</a></li>
+			</ul>
+		</nav>
+	</header>
 
-      <nav>
-        <ul class="nav-links">
-          <li><a href="./index.html" class="home">Home</a></li>
-          <li><a href="./pages/AboutUs.html" class="about">About Us</a></li>
-          <li><a href="./pages/ContactUs.html" class="">Contact Us</a></li>
-          <li><a href="./pages/Events.html" class="events">Events</a></li>
-          <li><a href="./pages/Blog.html" class="blog">Blog</a></li>
-        </ul>
-      </nav>
-  </header>
+  	<section class="hero">
+		<img src="/resources/izg_hero_helping_hand.png" alt="IZG Helping hand" class="hero-background section-background">
+		<div class="hero-content">
+	  		<p class="description">NGO • Donations • Feeding Schemes</p>
+	  		<h1 class="headline">We Are The Helping Hand Assisting All Those In Need</h1>
+	  		<p class="subtext subheadline">Whether you are person who supports the cause and would like to donate to offer a helping hand, or you are the person in need of a helping hand, we are for you.</p>
+	  
+	  		<a href="/pages/contactUs.html" class="btn cta">Reach Out To Make A Change</a>
+		</div>
+  	</section>
 
-  <section class="sign-in">
-    <a href="./Admin/Sign-In.html"> <button class="login" type="button">Login</button> </a>      
-  </section>
+  	<section id="about" class="about">
+		<div class="left-container">
+	  		<h1 class="heading">A Bit About Our Organisation</h1>
+	  		<!-- <h2 class="heading">A Bit About Our Organisation</h2> -->
+	  		<p class="subtext">Izandla Ziya Gezana is a Non-Governement Organization that focuses on assisting the underprivileged and homeless with hygiene products and food parcels</p>
+	  		<a href="/pages/AboutUs.html" class="btn">Read More About Us</a>
+		</div>
+		<div class="right-container">
+	  		<img src="/resources/dots_background.jpg" alt="Dots Background" class="overlay-background dots-background">
+	  		<img src="/resources/kids_being_fed_feeding_scheme.png" alt="Kids Being Fed Feeding Scheme" class="circle-img feeding-kids">
+	  		<img src="/resources/homeless_shelter.png" alt="Homeless Shelter" class="circle-img homeless-shelter">
+	  		<img src="/resources/women_hugging.png" alt="Women Hugging" class="circle-img women-hugging">
+		</div>
+  	</section>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Izandla Ziya Gezana</h2>
-      <h4 class="slogan">The helping hand.</h4>
-    </div>
-  </section>
+  	<section id="events" class="events">
+		<h1>Recent events</h1>
+	  
+		<div id="event-cards" class="event-cards">
+	  		<!-- Dynamically filled content -->
+		</div>
+  	</section>
 
-  <section id="about" class="about">
-    <div class="container">
-      <h2>About Us</h2>
-      <p>Izandla Ziya Gezana is a Non-Governement Organization that focuses on assisting the underprivileged and homeless with hygiene products and food parcels. For more about us, click on the button below.</p>
-      <a href="./pages/AboutUs.html" class="cta-btn">Learn More</a>
-    </div>
-  </section>
+  	<section id="contact" class="contact">
+		<img src="/resources/conference_background_image.png" alt="Conference Background" class="conference-background section-background">
+		<div class="container">
+			<div class="left-container">
+				<h1 class="heading">Join the cause today, enquire with us to make a change as soon as possible</h1>
+				<p class="subtext">Izandla Ziya Gezana is a Non-Governement Organization that focuses on assisting the underprivileged and homeless with hygiene products and food parcels</p>
+			</div>
+			<form class="contact-form">
+				<!-- Full Name -->
+				<div class="labelled-input">
+					<label for="full-name">Full Name</label>
+					<input type="text" name="full-name" id="full-name" placeholder="e.g. John Doe" required >
+				</div>
 
-  <section id="events" class="events">
-    <div class="container">
-      <h2>Our Events</h2>
-      <div class="event-cards">
-        <div class="event-card">
-          <img class="event-img" src="./resources/Pad Drive.jpg" margin-top: 1rem; max-width: 100%; height: auto; border-radius: 10px; />
-          <h3>Pad Drive</h3>
-          <p>May 15, 2024</p>
-          <a href="./pages/Events.html" class="details-btn">View details</a>
-        </div>
-      </div>
-    </div>
-  </section>
+				<!-- Email -->
+				<div class="labelled-input">
+					<label for="email">Email</label>
+					<input type="email" name="email" id="email" placeholder="e.g. johnd@gmail.com" required >
+				</div>
 
-  <section id="contact" class="contact">
-    <div class="container">
-       <h2>Get Involved</h2>
-      <p>Support our organization by volunteering or donating</p>
-      <img src= "./resources/izg donate.jpg" margin-top: 1rem; max-width: 100%; height: auto; border-radius: 10px; />
+				<!-- Phone Number -->
+				<div class="labelled-input">
+					<label for="phone-number">Phone Number</label>
+					<input type="text" name="phone-number" id="phone-number" placeholder="e.g. +27 12 710 3921" required>
+				</div>
 
-      <h2>Want to get in touch or contribute?</h2>
-      <a href="./pages/ContactUs.html" class="cta-btn">Contact Us</a>
-    </div>
-  </section>
+				<!-- Type of inquiry -->
+				<div class="labelled-input">
+					<label for="type-of-inquiry">Type of Inquiry</label>
+					<select name="type-of-inquiry" id="type-of-inquiry" required >
+						<option value="" selected disabled>Select an option</option>
+						<option value="donation">Donation</option>
+						<option value="assistance">Need a helping hand</option>
+						<option value="other">Other</option>
+					</select>
+				</div>
 
-  <footer> 
-        <!-- Social Media Links -->
-        <section class="footer">
+				<!-- Submit button -->
+				<button type="submit" class="btn submit-btn">Submit</button>
+			</form>
+		</div>
+  	</section>
 
-            <!-- Contact Information -->
-            <section>
-                <h2>Contact Us</h2>
-                <ul class="social-links">
-                    <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
-                    <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
-                    <li><a href="https://www.instagram.com/izandla_ziyagezana_org?igsh=MWdpcGo5eGdsdjVzag==" target="_blank">Instagram</a></li>
-                    <li><a href=" izg.npo@outlook.com" target="_blank"><Email></a></li>
-                </ul>
-            </section>
-
-            <!-- Copyrights -->
-            <section class ="copyright">
-                <p>&copy; 2025 Izandla Ziya Gezana. All rights reserved.</p>
-            </section>
-
-        </section>
-    </footer>
-
+  	<footer> 
+		<div class="main">
+		  	<img src="/resources/izg_full_color_logo.png" alt="IZG Logo" class="logo">
+		  	<ul class="social-links">
+				<li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+				<li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+				<li><a href="https://www.instagram.com/izandla_ziyagezana_org" target="_blank">Instagram</a></li>
+				<li><a href="mailto:izg.npo@outlook.com" target="_blank">Email</a></li>
+	  		</ul>
+		</div>
+		<p class="copyright">&copy;Izandla Ziya Gezana All Rights Reserved<br/>Designed and developed by Dev</p>
+  	</footer>
+  	<script src="/js/index_events.js" type="module"></script>
 </body>
 </html>

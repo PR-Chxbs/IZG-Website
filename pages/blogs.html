@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">    
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../css/global.css">
-	<link rel="stylesheet" href="../css/events.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/blog.css">
 	<link rel="shortcut icon" href="../resources/izg_full_color_logo.png" type="image/x-icon">
-	<title>IZG Events</title>
+    <title>Blog</title>
 </head>
+
 <body>
-	<header>
+    <header>
 		<a href="/">
 			<img src="/resources/izg_full_color_logo.png" alt="Company Logo" class="logo" />
 		</a>
@@ -17,34 +18,21 @@
 		  	<ul class="nav-links">
 				<li><a href="/">Home</a></li>
 				<li><a href="/pages/aboutUs.html">About</a></li>
-				<li><a href="/pages/events.html" class="active">Events</a></li>
-				<li><a href="/pages/blogs.html">Blog</a></li>
+				<li><a href="/pages/events.html">Events</a></li>
+				<li><a href="/pages/blogs.html" class="active">Blog</a></li>
 				<li><a href="/pages/contactUs.html">Contact Us</a></li>
 				<li><a href="/auth/login.html" class="btn">Login</a></li>
 			</ul>
 		</nav>
 	</header>
 
-	<div class="top-section"></div>
+    <div class="top-section"></div>
 
-	<main class="events">
-    	<section id="upcoming-section" class="upcoming-section">
-      		<h2>Upcoming Events</h2>
-    		<div id="upcoming-events" class="event-cards">
-	        	<!-- Dynamically filled content -->
-      		</div>
-    	</section>
-
-    	<section id="past-section">
-      		<h2>Past Events</h2>
-      		<div id="past-events" class="event-cards">
-        		<!-- Dynamically filled content -->
-      		</div>
-    	</section>
+	<main id="app" class="main-container">
+    	<!-- Blog list or single post will be injected here -->
   	</main>
 
-	<!-- Footer -->
-	<footer> 
+    <footer> 
 		<div class="main">
 		  	<img src="../resources/izg_full_color_logo.png" alt="IZG Logo" class="logo">
 		  	<ul class="social-links">
@@ -56,6 +44,7 @@
 		</div>
 		<p class="copyright">&copy;Izandla Ziya Gezana All Rights Reserved<br/>Designed and developed by Dev</p>
   	</footer>
-	<script src="../js/events.js" type="module"></script>
+
+    <script src="../js/blog.js"></script>
 </body>
 </html>

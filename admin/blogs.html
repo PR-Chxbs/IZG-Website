@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/vars.css">
+    <link rel="stylesheet" href="/css/admin_global.css">
+    <link rel="shortcut icon" href="/resources/izg_full_color_logo.png" type="image/x-icon">
+    <title>Admin | View all blog posts</title>
+</head>
+<body>
+    <nav id="side-nav" class="side-nav" role="navigation">
+        <!-- Injected Dynamically -->
+    </nav>
+
+    <main class="main-content">
+        <section class="blog-list">
+            <h2>All blogs</h2>
+            <div class="btn-container">
+                <a href="/admin/manage_blog.html" class="btn">+ Add Blog Post</a>
+            </div>
+            <table id="blogTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Author</th>
+                        <th>Title</th>
+                        <th>Slug</th>
+                        <th>Content</th>
+                        <th>Cover Image Url</th>
+                        <th>Published At</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Injected dynamically -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <div id="snackbar"></div>
+
+    <script src="/js/authGuard.js"></script>
+    <script src="/js/injectNav.js"></script>
+    <script src="/js/blogs/view_blogs.js" type="module"></script>
+
+</body>
+</html>

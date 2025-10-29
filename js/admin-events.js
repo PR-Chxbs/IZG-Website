@@ -1,14 +1,14 @@
-const API_URL = "https://izg-backend.onrender.com/api/events";
-const userId = 13; // Replace with logged-in user's ID (from localStorage or auth system)
+import { decodeJWT, showSnackbar, getApiUrl } from "./utils.js";
+
+const API_URL = `${getApiUrl()}/events`;
 
 const token = localStorage.getItem("authToken");
+const payload = decodeJWT(token);
+
+const userId = payload.user_id ? payload.user_id : 13;
 
 // DOM elements
-const form = document.getElementById("eventForm");
-const message = document.getElementById("message");
 const eventsBody = document.getElementById("eventsBody");
-const formTitle = document.getElementById("form-title");
-const submitBtn = document.getElementById("submitBtn");
 
 // Fetch and display all events
 async function loadEvents() {
@@ -33,80 +33,14 @@ async function loadEvents() {
     });
   } catch (error) {
     console.error(error);
-    message.textContent = " Failed to load events.";
+    showSnackbar("Failed to load events.");
   }
 }
 
-// Handle form submission (Create or Update)
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  const eventData = {
-    user_id: userId,
-    name: document.getElementById("name").value,
-    description: document.getElementById("description").value,
-    event_date: document.getElementById("event_date").value,
-    location: document.getElementById("location").value,
-    start_time: document.getElementById("start_time").value,
-    end_time: document.getElementById("end_time").value,
-    image_url: document.getElementById("image_url").value,
-  };
-
-  const eventId = document.getElementById("event_id").value;
-  const method = eventId ? "PUT" : "POST";
-  const url = eventId ? `${API_URL}/${eventId}` : API_URL;
-
-  try {
-    const res = await fetch(url, {
-      method,
-      headers: {
-         "Content-Type": "application/json",
-         "Authorization": `Bearer ${token}`
-        },
-      body: JSON.stringify(eventData),
-    });
-
-    const result = await res.json();
-
-    if (res.ok) {
-      message.textContent = eventId
-        ? " Event updated successfully!"
-        : "✅ Event created successfully!";
-      form.reset();
-      document.getElementById("event_id").value = "";
-      formTitle.textContent = "Create New Event";
-      submitBtn.textContent = "Create Event";
-      loadEvents();
-    } else {
-      message.textContent = ` ${result.message || "Error saving event"}`;
-    }
-  } catch (error) {
-    console.error(error);
-    message.textContent = " Could not connect to server.";
-  }
-});
-
 // Edit Event
 async function editEvent(id) {
-  try {
-    const res = await fetch(`${API_URL}/${id}`);
-    const event = await res.json();
-
-    document.getElementById("event_id").value = event.id;
-    document.getElementById("name").value = event.name;
-    document.getElementById("description").value = event.description;
-    document.getElementById("event_date").value = event.event_date.split("T")[0];
-    document.getElementById("location").value = event.location;
-    document.getElementById("start_time").value = event.start_time;
-    document.getElementById("end_time").value = event.end_time;
-    document.getElementById("image_url").value = event.image_url;
-
-    formTitle.textContent = "Edit Event";
-    submitBtn.textContent = "Update Event";
-  } catch (error) {
-    console.error(error);
-    message.textContent = " Failed to load event details.";
-  }
+  console.log(`Edit clicked: Event ${id}`)
+  window.location.href = `/admin/manageEvent.html?eventId=${id}`;
 }
 
 // Delete Event
@@ -124,16 +58,19 @@ async function deleteEvent(id) {
     const result = await res.json();
 
     if (res.ok) {
-      message.textContent = " Event deleted successfully!";
+      showSnackbar(" Event deleted successfully!");
       loadEvents();
     } else {
-      message.textContent = ` ${result.message}`;
+      showSnackbar(` ${result.message}`);
     }
   } catch (error) {
     console.error(error);
-    message.textContent = " Could not connect to server.";
+    showSnackbar(" Could not connect to server.");
   }
 }
 
 // Initial load
 loadEvents();
+
+window.editEvent = editEvent;
+window.deleteEvent = deleteEvent;

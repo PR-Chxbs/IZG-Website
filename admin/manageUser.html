@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/vars.css">
+    <link rel="stylesheet" href="/css/admin_global.css">
+    <link rel="shortcut icon" href="/resources/izg_full_color_logo.png" type="image/x-icon">
+    <title>Admin | Manage user</title>
+</head>
+<body>
+    <nav id="side-nav" class="side-nav" role="navigation">
+        <!-- Injected Dynamically -->
+    </nav>
+
+    <main class="main-content">
+        <h2 id="heading">Create User</h2>
+        <form id="userForm">
+            <input type="hidden" id="user_id">
+
+            <!-- Username -->
+            <div class="form-row">
+                <div class="labelled-input">
+                    <label for="username">Username</label>
+                    <input type="text" placeholder="e.g. JohnD" id="username" name="username" required>
+                </div>
+            </div>
+
+            <!-- Name -->
+            <div class="form-row">
+                <div class="labelled-input">
+                    <label for="first_name">First Name</label>
+                    <input type="text" placeholder="e.g. John" id="first_name" name="first_name" required>
+                </div>
+                <div class="labelled-input">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" placeholder="e.g. John" id="second_name" name="last_name" required>
+                </div>
+            </div>
+
+            <!-- Gender -->
+            <div class="form-row">
+                <div class="labelled-input">
+                    <label for="gender">Gender</label>
+                    <select name="gender" id="gender" required>
+                        <option value="" selected disabled>Select gender..</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <div class="labelled-input">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" placeholder="e.g. 1994-03-12" id="dob" name="dob" required>
+                </div>
+            </div>
+
+            <!-- Contact Details -->
+            <div class="form-row">
+                <div class="labelled-input">
+                    <label for="phone_number">Phone Number</label>
+                    <input type="text" placeholder="e.g. +27 67 908 2932" id="phone_number" name="phone_number" required>
+                </div>
+                <div class="labelled-input">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="e.g. johnd@gmail.com" id="email" name="email" required>
+                </div>
+            </div>
+
+            <!-- Role -->
+            <div class="form-row">
+                <div class="labelled-input">
+                    <label for="role">Role</label>
+                    <select name="role" id="role" required>
+                        <option value="" selected disabled>Select role..</option>
+                        <option value="Admin">Admin</option>
+                        <option value="User">User</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Password -->
+            <div class="form-row" id="password-row">
+                <!-- Injected Dynamically -->
+            </div>
+
+            <button type="submit" id="submit-btn">Create User</button>
+        </form>
+    </main>
+
+    <div id="snackbar"></div>
+
+    <script src="/js/authGuard.js"></script>
+    <script src="/js/injectNav.js"></script>
+    <script src="/js/users/manage_users.js" type="module"></script>
+</body>
+</html>
