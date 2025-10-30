@@ -34,6 +34,7 @@ function renderEvent(event) {
 
     // Replace skeleton with real content
     container.innerHTML = `
+        <a href="/pages/events.html" class="back-btn">← Back to all events</a>
         <div class="image-container">
           <img src="${event.image_url}" alt="${event.name}">
         </div>

@@ -5,12 +5,15 @@ const sideNavHTML =
         <div class="top-nav-section">
             <img src="/resources/izg_full_color_logo.png" alt="Izandla Ziya Gezana Logo" class="logo nav-logo" id="nav-logo" title="Go back to website"/>
             <ul class="main-nav-items">
+                <!--    
                 <li>
                     <a class="nav-item" href="/admin">
                         <img src="/resources/icons/home_nav_icon.png" alt="Home Icon"/>
                         <p>Home</p>
                     </a>
                 </li>
+                -->
+                
                 <li>
                     <a class="nav-item" href="/admin/users.html">
                         <img src="/resources/icons/users_nav_icon.png" alt="Users Icon" />
@@ -39,6 +42,12 @@ const sideNavHTML =
                     <a class="nav-item" href="/admin/categories.html">
                         <img src="/resources/icons/assignments_nav_icon.png" alt="Categories Icon" />
                         <p>Categories</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-item" href="/admin/messages.html">
+                        <img src="/resources/icons/home_nav_icon.png" alt="Home Icon"/>
+                        <p>Messages</p>
                     </a>
                 </li>
             </ul>

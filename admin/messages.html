@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/vars.css">
+    <link rel="stylesheet" href="/css/admin_global.css">
+    <link rel="shortcut icon" href="/resources/logo_favicon.png" type="image/x-icon">
+    <title>Admin | View all messages</title>
+</head>
+<body>
+    <nav id="side-nav" class="side-nav" role="navigation">
+        <!-- Injected Dynamically -->
+    </nav>
+
+    <main class="main-content">
+        <section class="messages-list">
+            <h2>All messages</h2>
+            
+            <table id="messagesTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>Inquiry Type</th>
+                        <th>Sent At</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Injected dynamically -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <div id="snackbar"></div>
+
+    <script src="/js/authGuard.js"></script>
+    <script src="/js/injectNav.js"></script>
+    <script src="/js/messages/view_messages.js" type="module"></script>
+</body>
+</html>

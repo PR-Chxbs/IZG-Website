@@ -45,7 +45,7 @@ document.getElementById("loginForm").addEventListener("submit", async function (
       localStorage.setItem("authToken", data.token);
       localStorage.setItem("rememberMe", rememberMe);
 
-      window.location.href = "/admin";
+      window.location.href = "/admin/users.html";
     } else {
       showSnackbar("Invalid login. Please check your credentials.");
     }
@@ -77,6 +77,6 @@ function checkSession() {
     }
 
     console.log("Redirecting...");
-    window.location.href = "/admin";
+    window.location.href = "/admin/users.html";
   }
 }

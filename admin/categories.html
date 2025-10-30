@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/vars.css">
     <link rel="stylesheet" href="/css/admin_global.css">
+    <link rel="stylesheet" href="/css/categories.css">
     <link rel="shortcut icon" href="/resources/logo_favicon.png" type="image/x-icon">
     <title>Admin | View all categories</title>
 </head>
@@ -14,6 +15,11 @@
     </nav>
 
     <main class="main-content">
+        <h1>Categories</h1>
+        <button id="createCategoryBtn">Create Category</button>
+        <div class="categories-container" id="categoriesContainer">
+
+        </div>
 
     </main>
 
@@ -21,6 +27,6 @@
 
     <script src="/js/authGuard.js"></script>
     <script src="/js/injectNav.js"></script>
-
+    <script src="/js/categories/categories.js" type="module"></script>
 </body>
 </html>

@@ -76,7 +76,8 @@ export const decodeJWT = (token) => {
 }
 
 export const getApiUrl = () => {
-  return "https://izg-backend.onrender.com/api";
+  const remote = true;
+  return remote ? "https://izg-backend.onrender.com/api" : "http://localhost:5000/api";
 }
 
 // confirmationDialog.js
