@@ -22,8 +22,6 @@ async function fetchEventDetails() {
     }
 }
 
-
-
 function renderEvent(event) {
     const container = document.getElementById("event-details");
     const eventDate = new Date(event.event_date);

@@ -119,6 +119,11 @@
         margin-top: 10px;
         
     }
+
+    .icon-text .icon {
+        height: 16px;
+        width: auto;
+    }
 }
 
 .contact {

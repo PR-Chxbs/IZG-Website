@@ -16,8 +16,15 @@ export const renderEventCard = (eventData, parentClass, eventCounter = 0, pagePa
     <img src=${imageUrl} alt="${eventData.name}" class="event-image"/>
     <div class="event-content">
       <div class="event-details">
-        <p class="date">${formattedDate}</p>
-        <p class="location">${eventData.location}</p>
+        <div class="icon-text">
+          <img src="/resources/icons/clock_icon.png" class="icon" alt="Clock icon"/>
+          <p class="date">${formattedDate}</p>
+        </div>
+        
+        <div class="icon-text">
+          <img src="/resources/icons/location_icon.png" class="icon" alt="Location icon"/>
+          <p class="location">${eventData.location}</p>
+        </div>
       </div>
       <div class="content">
         <p class="title">${eventData.name}</p>
