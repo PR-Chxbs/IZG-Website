@@ -33,6 +33,7 @@ async function fetchBlogBySlug(slug) {
 
 // Render all blogs
 async function renderBlogList() {
+  document.title = "IZG Blog";
   // Show skeletons while loading
   app.innerHTML = `
     <h1 class="heading">Welcome to our blog</h1>
@@ -92,6 +93,8 @@ async function renderSinglePost(slug) {
 
   try {
     const post = await fetchBlogBySlug(slug);
+
+    document.title = post.title;
 
     const html = `
       <div class="blog-post">
