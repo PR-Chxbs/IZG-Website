@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/vars.css">
+    <link rel="stylesheet" href="/css/admin_global.css">
+    <link rel="shortcut icon" href="/resources/logo_favicon.png" type="image/x-icon">
+    <title>Admin | Create Stock Item</title>
+</head>
+<body>
+    <nav id="side-nav" class="side-nav" role="navigation">
+        <!-- Injected Dynamically -->
+    </nav>
+
+    <main class="main-content">
+        <h2 id="heading">Create Stock Item</h2>
+        <form id="stockForm">
+            <input type="hidden" id="stock_id">
+
+            <!-- Name -->
+            <div class="form-row">
+                <div class="labelled-input">
+                    <label for="stock_name">Stock Name</label>
+                    <input type="text" placeholder="e.g. Tin Fish" id="stock_name" name="stock_name" required>
+                </div>
+                <div class="labelled-input">
+                    <label for="category_id">Category</label>
+                    <select name="category_id" id="category_id" required>
+                        <option value="" selected disabled>Select category...</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Quantity -->
+            <div class="form-row">
+                <div class="labelled-input">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" name="quantity" id="quantity" required>
+                </div>
+                <div class="labelled-input">
+                    <label for="image_url">Image Url</label>
+                    <input type="text" placeholder="e.g. https://imgur.com/tin_fish.png?w=400" id="image_url" name="image_url" required>
+                </div>
+            </div>
+
+            <button type="submit" id="submit-btn">Create Stock</button>
+        </form>
+    </main>
+
+    <div id="snackbar"></div>
+
+    <script src="/js/authGuard.js"></script>
+    <script src="/js/injectNav.js"></script>
+    <script src="/js/stock/manage_stock.js" type="module"></script>
+</body>
+</html>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/vars.css">
     <link rel="stylesheet" href="/css/admin_global.css">
-    <link rel="shortcut icon" href="/resources/izg_full_color_logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/resources/logo_favicon.png" type="image/x-icon">
     <title>Admin | Create blog</title>
 </head>
 <body>
@@ -14,16 +14,16 @@
     </nav>
 
     <main class="main-content">
-        <h2 id="heading">Create User</h2>
-        <form id="userForm">
-            <input type="hidden" id="user_id">
+        <h2 id="heading">Create blog</h2>
+        <form id="blogForm">
+            <input type="hidden" id="id">
 
             <!-- Author Name -->
             <div class="form-row">
                 <div class="labelled-input">
                     <label for="author-id">Author Name</label>
                     <select name="author-id" id="author-id">
-                        <option value="" selected>Select author...</option>
+                        <option value="" selected disabled>Select author...</option>
                     </select>
                 </div>
             </div>
@@ -44,12 +44,12 @@
             <div class="form-row">
                 <div class="labelled-input">
                     <label for="cover_image">Cover Image</label>
-                    <input type="text" placeholder="e.g. https://imgur.com/ngo.png?w=1000" id="cover_image" name="phone_number" required>
+                    <input type="text" placeholder="e.g. https://imgur.com/ngo.png?w=1000" id="cover_image" name="cover_image" required>
                 </div>
                 <div class="labelled-input">
                     <label for="published">Publication Status</label>
                     <select name="published" id="published" required>
-                        <option value="" selected>Select publication status...</option>
+                        <option value="" selected disabled>Select publication status...</option>
                         <option value="published">Published</option>
                         <option value="unpublished">Unpublished</option>
                     </select>
@@ -60,11 +60,11 @@
             <div class="form-row">
                 <div class="labelled-input">
                     <label for="content">Content</label>
-                    <textarea name="content" id="content" placeholder="Enter your content here"></textarea>
+                    <textarea name="content" id="content" placeholder="Enter your content here" required></textarea>
                 </div>
             </div>
 
-            <button type="submit" id="submit-btn">Create User</button>
+            <button type="submit" id="submit-btn">Create blog</button>
         </form>
     </main>
 
