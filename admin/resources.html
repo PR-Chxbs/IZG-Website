@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/vars.css">
     <link rel="stylesheet" href="/css/admin_global.css">
+    <link rel="stylesheet" href="/css/resources.css">
     <link rel="shortcut icon" href="/resources/izg_full_color_logo.png" type="image/x-icon">
     <title>Admin | View all resources</title>
 </head>
@@ -13,14 +14,21 @@
         <!-- Injected Dynamically -->
     </nav>
 
-    <main class="main-content">
-
+    <main class="main-content" id="main-content">
+        <h2>All stock items</h2>
+        <div class="btn-container">
+            <a href="/admin/manage_stock.html" class="btn">+ Add stock</a>
+        </div>
+        <div id="stock-container" class="stock-container">
+            <!-- Skeleton loaders here initially -->
+        </div>  
     </main>
 
     <div id="snackbar"></div>
 
     <script src="/js/authGuard.js"></script>
     <script src="/js/injectNav.js"></script>
+    <script src="/js/stock/view_stock.js" type="module"></script>
 
 </body>
 </html>

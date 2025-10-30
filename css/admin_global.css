@@ -24,7 +24,12 @@ li {
 
     img {
         align-self: center;
+        width: 22px;
     }
+}
+
+button.nav-item {
+    font-size: inherit;
 }
 
 main.main-content {
@@ -37,7 +42,8 @@ main.main-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: var(--primary-logo-clr);
+    /* background-color: var(--primary-logo-clr); */
+    background-color: #333;
     color: white;
     padding: 12px;
     width: 300px;
@@ -47,6 +53,7 @@ main.main-content {
     }
 
     .main-nav-items {
+        margin-top: 30px;
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -92,7 +99,8 @@ main.main-content {
 }
 
 .nav-item.logout-btn {
-    background-color: var(--primary-logo-clr);
+    /* background-color: var(--primary-logo-clr); */
+    background-color: transparent;
     font-family: inherit;
 
     p {
@@ -329,4 +337,19 @@ button:hover {
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+
+.decrease, .increase {
+    background-color: transparent;
+    color: #333;
+}
+
+.edit-btn {
+    background-color: transparent;
+    color: #333;
+}
+
+.refresh-btn {
+    width: 30px;
+    align-self: center;
 }

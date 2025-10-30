@@ -11,7 +11,8 @@ injectAuthorIds(userIds);
 if (blogId) {
     await preloadData(blogId);
     document.getElementById("heading").textContent = "Update Blog";
-    document.getElementById("submit-btn").textContent = "Save changes"
+    document.getElementById("submit-btn").textContent = "Save changes";
+    document.title = "Admin | Edit Blog";
 }
 
 const titleElement = document.getElementById("title");
@@ -58,7 +59,10 @@ function slugify(inputText) {
     if (!inputText) {
         return null
     }
-    return inputText.trim().toLowerCase().replaceAll(" ", "-");
+    return inputText
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "-");
 }
 
 async function getUserIds() {
@@ -84,7 +88,6 @@ async function getUserIds() {
 
 async function preloadData(id) {
     try {
-        console.log(`${API_URL}/${id}`);
         const res = await fetch(`${API_URL}/${id}`);
 
         const blog = await res.json();
@@ -117,10 +120,10 @@ function injectAuthorIds(userData) {
 function getFormData() {
     const formData = {
         author_id: document.getElementById("author-id").value,
-        title: document.getElementById("title").value,
-        slug: document.getElementById("slug").value,
-        content: document.getElementById("content").value,
-        cover_image: document.getElementById("cover_image").value,
+        title: document.getElementById("title").value.trim(),
+        slug: document.getElementById("slug").value.trim(),
+        content: document.getElementById("content").value.trim(),
+        cover_image: document.getElementById("cover_image").value.trim(),
         published: document.getElementById("published").value === "published",
     }
 

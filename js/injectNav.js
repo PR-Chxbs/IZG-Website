@@ -25,7 +25,7 @@ const sideNavHTML =
                 </li>
                 <li>
                     <a class="nav-item" href="/admin/blogs.html">
-                        <img src="../resources/icons/resources_nav_icon.png" alt="Blog Icon" />
+                        <img src="/resources/icons/blog_nav_icon.png" alt="Blog Icon" />
                         <p>Blog posts</p>
                     </a>
                 </li>
@@ -44,7 +44,7 @@ const sideNavHTML =
             </ul>
         </div>
         <button class="nav-item logout-btn" onclick="logout()">
-            <img src="/resources/icons/settings_nav_icon.png" alt="Settings Icon" />
+            <img src="/resources/icons/exit_nav_icon.png" alt="Settings Icon" />
             <p>Logout</p>
         </button>
         `;
