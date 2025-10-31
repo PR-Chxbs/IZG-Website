@@ -32,10 +32,11 @@ export function loadStockCards(stocks) {
 
   stocks.forEach(stock => {
     const card = document.createElement("div");
+    const stockImage = stock.image ? stock.image : "https://www.sosproducts.com/v/vspfiles/photos/350237-2.jpg?v-cache=1733143537";
     card.className = "stock-card";
 
     card.innerHTML = `
-      <img src="${stock.image}" alt="${stock.name}" />
+      <img src="${stockImage}" alt="${stock.name}" />
       <div class="card-title">${stock.name}</div>
       <div class="card-category">${stock.category_name}</div>
 
