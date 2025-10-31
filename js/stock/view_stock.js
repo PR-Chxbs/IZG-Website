@@ -48,7 +48,7 @@ export function loadStockCards(stocks) {
 
       <div class="card-actions">
         <button class="edit-btn">Edit</button>
-        <button class="delete-btn">Delete</button>
+        <button class="delete-btn btn-primary">Delete</button>
       </div>
     `;
 

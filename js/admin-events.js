@@ -25,8 +25,8 @@ async function loadEvents() {
         <td>${new Date(event.event_date).toLocaleDateString()}</td>
         <td>${event.location}</td>
         <td>
-          <button onclick="editEvent(${event.id})" class="edit-btn">Edit</button>
-          <button onclick="deleteEvent(${event.id})" class="delete delete-btn">Delete</button>
+          <button onclick="editEvent(${event.id})" class="btn-secondary">Edit</button>
+          <button onclick="deleteEvent(${event.id})" class="delete btn-primary">Delete</button>
         </td>
       `;
       eventsBody.appendChild(row);

@@ -97,7 +97,7 @@ async function renderSinglePost(slug) {
     document.title = post.title;
 
     const html = `
-      <div class="blog-post">
+      <div class="blog-post blog-content">
         <a href="#home" class="back-btn">← Back to all posts</a>
         <img src="${post.cover_image ? post.cover_image : defaultImageUrl }" alt="${post.title}">
         <h2>${post.title}</h2>

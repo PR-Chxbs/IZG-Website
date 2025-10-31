@@ -130,3 +130,33 @@ export const showConfirmationDialog = async (heading, description, cancelText, p
         }
     });
 }
+
+export const validatePassword = (password) => {
+  const minLength = /.{8,}/;
+  const hasUpper = /[A-Z]/;
+  const hasLower = /[a-z]/;
+  const hasNumber = /[0-9]/;
+  const hasSpecial = /[!@#$%^&*(),.?":{}|<>]/;
+
+  if (!minLength.test(password)) {
+    showSnackbar("Password must have a min length of 8 characters");
+    return false;
+  }
+
+  if (!hasUpper.test(password) || !hasLower.test(password)) {
+    showSnackbar("Password must have atleast 1 upper case and lower case letter");
+    return false;
+  }
+
+  if(!hasNumber.test(password)) {
+    showSnackbar("Password must have atleast 1 number");
+    return false;
+  }
+
+  if(!hasSpecial.test(password)) {
+    showSnackbar(`Password must include atleast 1 special character (!@#$...)`);
+    return false;
+  }
+
+  return true;
+}

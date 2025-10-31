@@ -40,15 +40,19 @@ function renderCategoryCard(category, isNew = false) {
 
     const editBtn = document.createElement("button");
     editBtn.textContent = "Edit";
+    editBtn.className = "btn-secondary";
 
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete";
+    deleteBtn.className = "btn-primary";
 
     const saveBtn = document.createElement("button");
     saveBtn.textContent = "Save";
+    saveBtn.className = "btn-primary";
 
     const cancelBtn = document.createElement("button");
     cancelBtn.textContent = "Cancel";
+    cancelBtn.className = "btn-secondary";
 
     function showViewMode() {
         card.innerHTML = "";
@@ -63,8 +67,8 @@ function renderCategoryCard(category, isNew = false) {
         card.innerHTML = "";
         card.appendChild(input);
         actions.innerHTML = "";
-        actions.appendChild(saveBtn);
         actions.appendChild(cancelBtn);
+        actions.appendChild(saveBtn);
         card.appendChild(actions);
     }
 

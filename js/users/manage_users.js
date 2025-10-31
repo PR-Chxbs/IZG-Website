@@ -1,4 +1,4 @@
-import { showSnackbar, getApiUrl } from "../utils.js";
+import { showSnackbar, getApiUrl, validatePassword } from "../utils.js";
 
 const params = new URLSearchParams(window.location.search);
 const userId = params.get("userId");
@@ -28,8 +28,12 @@ form.addEventListener("submit", async (e) => {
 
         if (password !== confirmPassword) {
             showSnackbar("Passwords don't match!");
-            return
-        }    
+            return;
+        }
+
+        if (!validatePassword(password)) {
+            return;
+        }
     }
 
     const userData = getFormData();

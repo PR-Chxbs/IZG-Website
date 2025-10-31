@@ -2,6 +2,12 @@
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
+
+    margin-top: 30px;
+}
+
+#createCategoryBtn {
+    margin-top: 20px;
 }
 
 .category-card {
@@ -14,7 +20,11 @@
     gap: 8px;
 
     button {
-        padding: auto;
+        padding: 6px 16px;
+        
+    }
+
+    .btn-secondary {
         background-color: transparent;
         color: black;
     }
