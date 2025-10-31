@@ -46,7 +46,7 @@ const sideNavHTML =
                 </li>
                 <li>
                     <a class="nav-item" href="/admin/messages.html">
-                        <img src="/resources/icons/home_nav_icon.png" alt="Home Icon"/>
+                        <img src="/resources/icons/messages_nav_icon.png" alt="Messages Icon"/>
                         <p>Messages</p>
                     </a>
                 </li>
