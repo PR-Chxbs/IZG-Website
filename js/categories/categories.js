@@ -87,9 +87,15 @@ function renderCategoryCard(category, isNew = false) {
                 body: JSON.stringify({ name: newName })
             });
             const newCat = await res.json();
-            category.id = newCat.id;
-            category.name = newCat.name;
-            nameDisplay.textContent = category.name;
+
+            if (res.ok) {
+                category.id = newCat.id;
+                category.name = newCat.name;
+                nameDisplay.textContent = category.name;
+
+                showSnackbar("Category successfully created");
+            }
+            
             isNew = false;
             showViewMode();
         } else {
@@ -110,6 +116,7 @@ function renderCategoryCard(category, isNew = false) {
             if (res.ok) {
                 category.name = newName;
                 nameDisplay.textContent = newName;
+                showSnackbar("Category successfully updated");
             }
 
             showViewMode();
@@ -130,6 +137,7 @@ function renderCategoryCard(category, isNew = false) {
 
         if (res.ok) {
             card.remove();
+            showSnackbar("Category successfully deleted");
         }
     };
 
